@@ -101,7 +101,10 @@ blockquote {
 }
 
 pre {
-    padding: 2rem 1rem 1rem 3rem !important;
+    padding: 1.5rem 1.5rem 1.5rem 3.3rem !important;
+    margin: 1rem 0 !important;
+    background: #272822;
+    overflow: auto;
     border-radius: 0.35rem;
     tab-size: 4;
 }
@@ -154,7 +157,8 @@ code {
     right: 46px;
     line-height: 0;
     font-weight: bold;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    /* font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; */
+    font-family: normal;
     z-index: 1;
     filter: invert(50%);
     cursor: pointer;
@@ -186,6 +190,8 @@ pre code {
     color: #e8eaf6;
     background-color: #272822;
 }
+
+
 
 /* 键盘 kbd 标签样式 */
 kbd {
@@ -240,8 +246,15 @@ mark {
     margin-bottom: 0;
 }
 
+/* 标题栏颜色 */
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    /* background: linear-gradient(220.55deg, #FFED46 0%, #FF7EC7 100%); */
+    /* background: linear-gradient(220.55deg, #FFBB89 0%, #7B6AE0 100%); */
+    /* background: linear-gradient(220.55deg, #FFF500 0%, #FF00B8 100%); */
+    /* background: linear-gradient(220.55deg, #4063BC 0%, #6B0013 100%); */
+    background: linear-gradient(220.55deg, #FF5E98 0%, #0F213E 100%);
+    /* background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); */
+    opacity: 0.8;
 }
 
 .text-color {
@@ -592,9 +605,12 @@ header .go-back i {
     font-size: 2.5rem;
     font-weight: 400;
 }
-
+/* 动态切换背景颜色 */
 @-webkit-keyframes rainbow {
-
+    100%{
+        background: linear-gradient(45deg, rgba(23, 90, 190, 0.75) 0%, rgba(205, 173, 211, 0.65) 100%);
+    }
+/* 
     0%,
     100% {
         background: rgba(156, 39, 176, 0.75);
@@ -636,7 +652,7 @@ header .go-back i {
         background: linear-gradient(45deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
-    }
+    } */
 }
 
 @keyframes rainbow {
