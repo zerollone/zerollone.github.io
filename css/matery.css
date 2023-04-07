@@ -27,6 +27,28 @@
     }
 
     .post-container {
+        width: 99%;
+        margin: 0 auto;
+        max-width: 1250px;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .container_header {
+        /* width: 90%;*/
+        /* max-width: 1125px; */
+        /* max-width: 1712px; */
+        margin-left: 30px; 
+        margin-right: 30px;
+    }
+
+    .head-container_header {
+        position: absolute;
+        padding: 0 30px;
+        width: 100%;
+    }
+
+    .post-container_header {
         width: 90%;
         margin: 0 auto;
         max-width: 1250px;
@@ -1986,7 +2008,9 @@ p.search-result-summary{
 }
 
 .top-scroll .btn-floating {
-    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
+    /* background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%); */
+    background: linear-gradient(to bottom right, #837f7e 0%, #797274 100%);
+    opacity: 0.3;
     width: 48px;
     height: 48px;
 }
