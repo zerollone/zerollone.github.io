@@ -1,0 +1,1845 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Java基础语法知识, zerollone">
+    <meta name="description" content="一、Java概述Java是由Sun(stanfod university network)公司于1995年5月23日正式推出的一套计算机高级编程语言。
+Java语言的特点1、简洁高效Java语言非常简洁，相比于C++中头文件、指针等各种抽象">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Java基础语法知识 | zerollone</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container_header">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">zerollone</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-book" style="zoom: 0.6;"></i>
+      
+      <span>区块链</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories/solidity">
+          
+          <span>solidity</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-laptop-code" style="zoom: 0.6;"></i>
+      
+      <span>Java</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories/Java%E5%9F%BA%E7%A1%80">
+          
+          <span>Java基础</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Spring">
+          
+          <span>Spring</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/SpringMVC">
+          
+          <span>SpringMVC</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/SpringBoot">
+          
+          <span>SpringBoot</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/Mybatis">
+          
+          <span>Mybatis</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-database" style="zoom: 0.6;"></i>
+      
+      <span>工具</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories/git">
+          
+          <span>git</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/docker">
+          
+          <span>docker</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories/cs" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-film" style="zoom: 0.6;"></i>
+      
+      <span>基础</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/categories/MySQL">
+          
+          <span>MySQL</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95">
+          
+          <span>数据结构与算法</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories/others" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>其他</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-list" style="zoom: 0.6;"></i>
+      
+      <span>类别</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/tags">
+          
+          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>标签</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>类别</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          
+          <i class="fas fa-archive" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>归类</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">zerollone</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-book"></i>
+			
+			区块链
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories/solidity " style="margin-left:75px">
+				  
+		          <span>solidity</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-laptop-code"></i>
+			
+			Java
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories/Java%E5%9F%BA%E7%A1%80 " style="margin-left:75px">
+				  
+		          <span>Java基础</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/Spring " style="margin-left:75px">
+				  
+		          <span>Spring</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/SpringMVC " style="margin-left:75px">
+				  
+		          <span>SpringMVC</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/SpringBoot " style="margin-left:75px">
+				  
+		          <span>SpringBoot</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/Mybatis " style="margin-left:75px">
+				  
+		          <span>Mybatis</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-database"></i>
+			
+			工具
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories/git " style="margin-left:75px">
+				  
+		          <span>git</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/docker " style="margin-left:75px">
+				  
+		          <span>docker</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-film"></i>
+			
+			基础
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/categories/MySQL " style="margin-left:75px">
+				  
+		          <span>MySQL</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95 " style="margin-left:75px">
+				  
+		          <span>数据结构与算法</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories/others" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			其他
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-list"></i>
+			
+			类别
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/tags " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tags" style="position: absolute;left:50px" ></i>
+			      
+		          <span>标签</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>类别</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/archives " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-archive" style="position: absolute;left:50px" ></i>
+			      
+		          <span>归类</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://x0.ifengimg.com/res/2020/47DC641E40B34CEF2A209A9B595031C97F0EE1C5_size311_w1920_h1200.jpeg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Java基础语法知识</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+                                <span class="chip bg-color">Java基础语法</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                Java基础
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-04-12
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-04-12
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    22 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="一、Java概述"><a href="#一、Java概述" class="headerlink" title="一、Java概述"></a>一、Java概述</h2><p>Java是由Sun(stanfod university network)公司于1995年5月23日正式推出的一套计算机高级编程语言。</p>
+<h4 id="Java语言的特点"><a href="#Java语言的特点" class="headerlink" title="Java语言的特点"></a>Java语言的特点</h4><p><strong>1、简洁高效</strong><br>Java语言非常简洁，相比于C++中头文件、指针等各种抽象的概念，Java更好理解，便于上手，同时还提供了功能强大的系统类库，使开发变得更加简洁高效。<br><strong>2、跨平台</strong><br>程序在不同平台的兼容性问题一直困扰着开发者，如果我们开发的程序能够无障碍地同时运行在Windows、Mac OS和Linux系统中，那将非常完美。而Java就可以一套代码运行在多个平台。<br><strong>3、面向对象</strong><br>面向对象是一种编程思想，这种思想地诞生，对于软件工程有着划时代地意义，开发者告别了面向过程开发地繁琐步骤，从一个新地维度重新读编程这件事，极大地提升了软件开发效率和能力，Java就是这样一种面向对象的高级编程语言。<br><strong>4、分布式计算</strong><br>Java提供了一套网络操作类库，很适合开发分布式计算的程序，开发者可以通过调用类库进行网络程序开发，实现分布式特性。<br><strong>5、健壮性</strong><br>Java提供了非常强大的排错机制，在程序编译阶段就可以检测出程序中的错误，无需等到运行时才暴露出存在的问题。同时在运行阶段会再一次进行相应的检查，多种手段保证了程序的稳定性和健壮性。<br><strong>6、可处理多线程</strong><br>线程是进程的基本单位，是程序开发中必不可少的一种基础资料，Java提供了良好的多线程处理机制，使程序具备更为优秀的交互性。</p>
+<h4 id="Java的运行机制"><a href="#Java的运行机制" class="headerlink" title="Java的运行机制"></a>Java的运行机制</h4><p><strong>Java开发分为三步：</strong></p>
+<ul>
+<li>在后缀.java地文件中编写Java程序，此文件称之为Java源文件</li>
+</ul>
+<ul>
+<li>通过编译器将源文件编译为后缀为.class地字节码文件</li>
+</ul>
+<ul>
+<li>计算机读取字节码文件运行程序</li>
+</ul>
+<p>编译器可以理解为翻译，它可以将开发者写地程序翻译成计算机能识别地二进制数据</p>
+<p>Java拥有自己的虚拟计算机，这个虚拟的计算机有自己的内存，有自己的磁盘，被称为Java虚拟机（Java virtual machine，JVM）所有的Java程序都运行在JVM上。</p>
+<p>Java程序能够做到跨平台运行，也是因为JVM，不同的操作系统上只要安装上了JVM，就可以运行Java程序，JVM可以将不同操作系统的底层运行机制进行屏蔽。而编译好的字节码文件只需要识别JVM，而不需要关心更底层的操作系统，由JVM去适应识别操作系统。</p>
+<h4 id="Java三大体系"><a href="#Java三大体系" class="headerlink" title="Java三大体系"></a>Java三大体系</h4><p>Java语言衍生了三个体系分支，分别是J2SE、J2ME、J2EE</p>
+<p>J2SE（Java2 platform standard edition）定义了Java的核心类库，包含了各种常用组件，是Java开发的基础</p>
+<p>J2ME（Java2 paltform micro edition）是基于J2SE衍生出的专用于移动设备的开发组件，如手机、机顶盒、车载导航等</p>
+<p>J2EE（Java2 platform enterprise edition）是基于J2SE扩展出的企业级开发组件，提供了Java Web相关的开发组件，如Servlet、JSP等，是Java开发的主流技术。</p>
+<p>2005年之后，J2SE更名为Java SE、J2ME更名为Java ME、J2EE更名为Java EE。在三大体系中，Java SE是核心，Java ME和Java EE是在Java SE的基础上发展起来的</p>
+<h4 id="Java环境"><a href="#Java环境" class="headerlink" title="Java环境"></a>Java环境</h4><p>Java环境主要分为：JRE和JDK</p>
+<p>JRE（Java runtime environment）是Java的运行环境，包括JVM和Java基础类库，一台计算机要运行Java程序，就必须有JRE。</p>
+<p>JDK（Java development kit）是Java开发包，它包含JRE和编译Java源文件的编译器，想要在一台计算机上进行Java程序开发，就必须安装JDK</p>
+<p>JRE是Java程序运行环境，JDK是Java程序开发环境，而JDK包含了JRE，因此只需要安装JDK即可。</p>
+<h2 id="二、Java语法"><a href="#二、Java语法" class="headerlink" title="二、Java语法"></a>二、Java语法</h2><h4 id="1、关键字"><a href="#1、关键字" class="headerlink" title="1、关键字"></a>1、关键字</h4><p>Java关键字是指Java语言预先定义好的，有指定意义的标识符，是程序的核心组成。</p>
+<p>关键字来构建程序的核心骨架，Java类库提供程序要调用的方法，开发者自定义的标识符来指定程序完成相关工作。</p>
+<p>Java关键字可以表示一个基本数据类型，可以表示流程控制，可以作为类和方法的修饰符等，但是不能作为包名、类名、方法名、参数名、变量名。Java关键字全部为小写。</p>
+<!-- |  关键字 | 含义  |
+| - | - |
+| abstract  |   |
+| assert  |   |
+| boolean  |   |
+| break  |   |
+| byte  |   |
+| case |   |
+| catch  |   |
+|   |   |
+|   |   |
+（46页） -->
+
+<h4 id="2、变量"><a href="#2、变量" class="headerlink" title="2、变量"></a>2、变量</h4><p>变量是计算机语言中的一个概念，可以表示某个具体数值，并且这个值可以改变，所以叫变量。与之对应的是常量,常量也是用来表示某个数值的，但值是固定的，不能改变。</p>
+<p>计算机存储数据的地方叫作内存，内存会为不同的数据开辟不同的空间来存储，所以数据和数据之间是相互独立的，互不影响。</p>
+<p>每一个内存空间都有自己独一无二的地址，程序就是通过内存地址找到具体的内存空间，从中取出数据。内存地址是十六进制的数据</p>
+<p>变量是一个概念，存储在内存中，方便存取内存中的数据，是程序中存储数据的基本单元。变量有三要素：数据类型、变量名、变量值</p>
+<blockquote>
+<p>int a &#x3D; 10;<br>数据类型 变量名  变量值</p>
+</blockquote>
+<ul>
+<li>数据类型是变量中保存的值的数据类型，不同的数据需要用不同的类型来保存，整数、小数、文本信息、日期等都需要用不同的数据类型来表示。</li>
+<li>变量名由开发者自己定义，给存储数据的内存地址取别名</li>
+<li>变量值就是内存中存储的数据。</li>
+</ul>
+<p><strong>使用变量</strong><br>1、声明变量的数据类型和变量名，计算机根据数据类型在内存中开辟相应大小的空间，同时变量名的定义要符合规则，可以包含数字、字母、下划线、$，但不能包含空格、运算符，不能用纯关键字命名，不能以数字开头，大小写字母可混用，首字母应小写，后续单词的首字母应大写，如myName</p>
+<p>2、给内存空间赋值，该值就是变量值</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 开辟内存空间，数据类型是int</span>
+        <span class="token keyword">int</span> num<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 赋值</span>
+        num <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="3、基本数据类型"><a href="#3、基本数据类型" class="headerlink" title="3、基本数据类型"></a>3、基本数据类型</h4><p>Java共有8种基本数据类型，程序种常用的数据类型有整数、小数、字母、单词和汉字。这些数据类型分为两类，数值类型和非数值类型。</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>基本数据类型</th>
+<th>所占空间</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数值类型</td>
+<td>byte</td>
+<td>1字节（8位）</td>
+</tr>
+<tr>
+<td>数值类型</td>
+<td>int</td>
+<td>4字节</td>
+</tr>
+<tr>
+<td>数值类型</td>
+<td>short</td>
+<td>2字节</td>
+</tr>
+<tr>
+<td>数值类型</td>
+<td>long</td>
+<td>8字节</td>
+</tr>
+<tr>
+<td>数值类型</td>
+<td>float</td>
+<td>4字节</td>
+</tr>
+<tr>
+<td>数值类型</td>
+<td>double</td>
+<td>8字节</td>
+</tr>
+<tr>
+<td>非数值类型</td>
+<td>char</td>
+<td>2字节</td>
+</tr>
+<tr>
+<td>非数值类型</td>
+<td>boolean</td>
+<td>1&#x2F;8字节</td>
+</tr>
+</tbody></table>
+<h4 id="4、数据类型转换"><a href="#4、数据类型转换" class="headerlink" title="4、数据类型转换"></a>4、数据类型转换</h4><h5 id="4-1-自动转换"><a href="#4-1-自动转换" class="headerlink" title="4.1 自动转换"></a>4.1 自动转换</h5><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> num1 <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token keyword">double</span> num2 <span class="token operator">=</span> num1<span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">//输出  10  10.0</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>上面的程序虽然从结果来看数值并没有改变，但在计算机底层是两种完全不同的数据类型。由原来的int类型变为double类型，这一过程叫作自动类型转换，程序会自动去识别数据类型并完成转换</p>
+<p>反之则不行。double类型的存储空间为8字节，int类型的存储空间为4字节，所以 int类型可以自动转为double类型，double类型不能自动转为int类型（自动转换成立，解释见下节）。</p>
+<p>浮动型（double、float）描述数值的精度比整型（short、int、long）高，所以整型数据类型也可以自动转换为浮点型，即使long为8字节，float为4字节，不满足只能由低字节向高字节进行转换的原则，也同样可以完成自动转换。我们说的自动类型转换只包括所有数值类型，不包括char 和 boolean。</p>
+<p><em>基本数据类型自动转换的关系：byte -&gt; short -&gt; int -&gt; long -&gt; float -&gt; double</em></p>
+<h5 id="4-2-强制转换"><a href="#4-2-强制转换" class="headerlink" title="4.2 强制转换"></a>4.2 强制转换</h5><p>上一节提到int类型可以自动转为double类型,而double类型不能自动转为int类型。这句话严格意义上来讲是错的。即double类型是可以转为int类型的只不过程序不会自动完成，需要我们手动干预进行强制转换。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">double</span> num1 <span class="token operator">=</span> <span class="token number">10.5</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> num2 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> num1<span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>num2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token comment" spellcheck="true">// 输出 10.5  10</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>通过程序结果可以看到double在转为int时会造成精度损失，由10.5变成了10，小数点后全部丢弃，将浮点型数值强转为整型时，只保留小数点左边的数值，不会按照四舍五入的方式来完成整数位的进位。</p>
+<h4 id="5、运算符"><a href="#5、运算符" class="headerlink" title="5、运算符"></a>5、运算符</h4><h5 id="5-1-赋值运算符"><a href="#5-1-赋值运算符" class="headerlink" title="5.1 赋值运算符"></a>5.1 赋值运算符</h5><p>赋值运算符顾名思义就是用来做赋值操作的，更准确地来讲就是将数值赋给某个变量，或者将一个变量的值赋给另外一个变量。语法 “ 数据类型变量名&#x3D;数值&#x2F;变量; ” 表示将等号右边的值赋给等号左边。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>agrs<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> num1 <span class="token operator">=</span> num<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="5-2-基本算术运算符"><a href="#5-2-基本算术运算符" class="headerlink" title="5.2 基本算术运算符"></a>5.2 基本算术运算符</h5><p>使用基本算术运算符可以完成Java程序的基本数学运算，这只适用于数值类型的变量（+除外，它可以用作字符串拼接），包括 +、-、*、&#x2F;、%、++、–。</p>
+<p>其中 +、-、*、&#x2F;、%会自动完成操作数的数据类型转换，由低字节转为高字节，比如“ 10.1 + 5”，会转换为“ 10.1 + 5.0 ”进行计算。</p>
+<p><em>注意：a++ 与 ++a是有区别的，a++表示当前操作先取出变量a的值，在进行运算（a进行加一）；++a表示当前操作先进行运算（对a进行加一），再取出变量a的值</em></p>
+<h5 id="5-3-复合算术运算符"><a href="#5-3-复合算术运算符" class="headerlink" title="5.3 复合算术运算符"></a>5.3 复合算术运算符</h5><p>复合算术运算符可以在基本算术运算符的基础上进一步简化代码，包括 +&#x3D;、-&#x3D;、*&#x3D;、&#x2F;&#x3D;、%&#x3D;。<br>代码<code>a += b</code>表示先计算变量a与变量b的之和，再把计算之和赋值给变量a，等同于<code>a = a + b</code>，其他的类似。</p>
+<h5 id="5-4-关系运算符"><a href="#5-4-关系运算符" class="headerlink" title="5.4 关系运算符"></a>5.4 关系运算符</h5><p>关系运算符用来计算一个表达式是否成立，只有两种结果，即成立或者不成立。关系运算符有：&#x3D;&#x3D;、!&#x3D;、&gt;、&lt;、&gt;&#x3D;、&lt;&#x3D;。其中&gt;、&lt;、&gt;&#x3D;、&lt;&#x3D;只能用作数值类型的比较，&#x3D;&#x3D;、!&#x3D;除了可以比较数值类型，也可以比较两个对象是否相等。</p>
+<p>对象是存储再内存中的，比较两个对象是否相等，实际上就是比较两个对象的内存地址是否相等。如果两个对象的内存地址相等，那就表明它们是同一个对象。</p>
+<h5 id="5-5-逻辑运算符"><a href="#5-5-逻辑运算符" class="headerlink" title="5.5 逻辑运算符"></a>5.5 逻辑运算符</h5><p>逻辑运算符只能用于boolean类型的数据运算，判断boolean数据之间的逻辑关系，包括与（&amp;）、或（|）、非（!）三种关系，其中与、或还有短路与（&amp;&amp;）、短路或（||）。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a &amp; b</td>
+<td>当a和b都为true时，结果为true，否则为false</td>
+</tr>
+<tr>
+<td>a &amp;&amp; b</td>
+<td>当a和b都为true时，结果为true，否则为false</td>
+</tr>
+<tr>
+<td>a | b</td>
+<td>当a或者b有一个为true，结果都为true，否则为false</td>
+</tr>
+<tr>
+<td>a || b</td>
+<td>当a或者b有一个为true，结果都为true，否则为false</td>
+</tr>
+<tr>
+<td>a ! b</td>
+<td>若a为true，结果为false；若变量为false，则结果为true</td>
+</tr>
+</tbody></table>
+<p> <strong>&amp;和&amp;&amp;，|和||的区别：</strong>&amp;操作只有两个操作数都为true，结果才为true，否则为false，如果在a &amp; b中，a为false，还需要计算判断b，再给出结果。如果使用 a &amp;&amp; b，如果a为false，则不要进行判断b，直接给出结果-false。从效率的角度考虑，&amp;&amp;会少执行一次判断，所以&amp;&amp;比&amp;更加高效。|与||同理。</p>
+<h5 id="5-6-条件运算符"><a href="#5-6-条件运算符" class="headerlink" title="5.6 条件运算符"></a>5.6 条件运算符</h5><p>条件运算符也叫三元运算符。可以完成给变量赋值的操作，根据不同的条件完成不同的操作。基本语法<code>变量a = 条件 ？ 值1 ：值2</code></p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        String result <span class="token operator">=</span> a <span class="token operator">></span> <span class="token number">5</span> <span class="token operator">?</span> <span class="token string">"a大于5"</span> <span class="token operator">:</span> <span class="token string">"a小于5"</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// 输出 a大于5</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="5-7-位运算符"><a href="#5-7-位运算符" class="headerlink" title="5.7 位运算符"></a>5.7 位运算符</h5><p>位运算符是指对表达式以二进制为单位进行运算。位运算符按位与（&amp;）、按位或（|）、按位与或（^）、左移（&lt;&lt;）、右移（&gt;&gt;）</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a &amp; b</td>
+<td>a、b变量转换为二进制数，每一位的数字一一对应，若都为1，则记作1，否则为0</td>
+</tr>
+<tr>
+<td>a | b</td>
+<td>a、b变量转换为二进制数，每一位的数字一一对应，只要有一个为1，则该位记作1，否则记作0</td>
+</tr>
+<tr>
+<td>a^b</td>
+<td>a、b变量转换为二进制数，每一位的数字一一对应，相同记作0，不同记作1</td>
+</tr>
+<tr>
+<td>a &lt;&lt; b</td>
+<td>a乘以2的b次方，a * (2^b)</td>
+</tr>
+<tr>
+<td>a &gt;&gt; b</td>
+<td>a除以2的b次方，a &#x2F; (2^b)</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p> 计算 10 &amp; 5<br>1 0 1 0<br>0 1 0 1<br>-———<br>0 0 0 0<br>所以，计算后 10&amp;5 的结果是0000</p>
+</blockquote>
+<p><em>如何区分逻辑运算符和位运算符？通过操作数来判断，如果操作是boolean类型，则为逻辑运算符；如果操作数为数值类型，则为位运算符</em></p>
+<h2 id="三、流程控制"><a href="#三、流程控制" class="headerlink" title="三、流程控制"></a>三、流程控制</h2><h4 id="1、if-else"><a href="#1、if-else" class="headerlink" title="1、if-else"></a>1、if-else</h4><p>if-else是一个基本的流程控制语法，用于判断某个条件是否成立，然后执行不同的逻辑，基本语法如下：</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span> 判断条件 <span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 条件成立的语句</span>
+<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 条件不成立的语句</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="2、多重if"><a href="#2、多重if" class="headerlink" title="2、多重if"></a>2、多重if</h4><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">></span> <span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"成绩不错！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">></span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"你及格了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"你没有及格"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>if-else的使用是比较灵活的,可以根据不同情况选择不同的组合方式,需要注意的是:</p>
+<ul>
+<li>if 后面必须跟(条件);</li>
+<li>else 后面不能跟（条件);</li>
+<li>else 后面可直接跟{}，也可跟if语句。</li>
+</ul>
+<h4 id="3、if嵌套"><a href="#3、if嵌套" class="headerlink" title="3、if嵌套"></a>3、if嵌套</h4><p>如果遇到条件中包含子条件，那么使用单一的if-else或者多重if已经不能满足需求了。因为单一的if-else和多重if只能在一个维度处理逻辑，如果再增加一个维度，就需要使用if嵌套来完成。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 成绩大于90分且年龄等于10岁的学生</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> age <span class="token operator">=</span> <span class="token number">9</span>；
+        <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">></span> <span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"成绩不错！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>age <span class="token operator">==</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"你是10岁的学生"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"你不是10岁的学生"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>num <span class="token operator">></span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"你及格了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"你没有及格"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="4、switch-case"><a href="#4、switch-case" class="headerlink" title="4、switch-case"></a>4、switch-case</h4><p>switch-case也可以完成流程控制，与if不同的是，switch-case只能完成等值判断，即条件如果是判断两个值是否相等，可以使用switch-case，如果是比较两个值的大小关系，则不能使用switch-case。switch支持 int、short、byte、char、枚举、String 数据类型的判断，不支持boolean类型。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 参加比赛，第一名奖励2000，第二名奖励1000，第三名奖励500，否则没有奖励</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> placing <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">switch</span><span class="token punctuation">(</span>placing<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">case</span> <span class="token number">1</span><span class="token operator">:</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"奖励2000"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token number">2</span><span class="token operator">:</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"奖励1000"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> <span class="token number">3</span><span class="token operator">:</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"奖励500"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">default</span><span class="token operator">:</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"没有奖励"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>需要注意的是，每一个case语句必须要跟break，表示结束当前的代码块，如果不跟break，则从当前的case语句起，后面所有的case判断都失效，都会直接执行对应的代码块。</p>
+<h2 id="四、循环"><a href="#四、循环" class="headerlink" title="四、循环"></a>四、循环</h2><p>循环在程序开发中非常重要，也是使用频率很高的语法，使用循环语句可以非常有效的缩减代码，使得代码编写简洁高效。</p>
+<p>循环存在四个要素，分别是（1）初始化变量（2）循环条件（3）循环体（4）更新循环变量<br>循环分为三种，分别是while循环，for循环，do-while循环。</p>
+<h4 id="1、while循环"><a href="#1、while循环" class="headerlink" title="1、while循环"></a>1、while循环</h4><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 基本语法</span>
+
+<span class="token keyword">while</span><span class="token punctuation">(</span>循环条件<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 循环体</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>当循环条件成立时，会重复执行循环体中的代码，直到条件不成立。并且应该在循环体中动态控制循环条件是否成立，否则就成了死循环。以打印五次hello world来说明while循环的四要素。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                              <span class="token comment" spellcheck="true">// 初始化循环变量</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">{</span>                           <span class="token comment" spellcheck="true">// 循环条件</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// 循环体</span>
+            i<span class="token operator">++</span><span class="token punctuation">;</span>                                <span class="token comment" spellcheck="true">// 更新循环变量</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="2、-do-while循环"><a href="#2、-do-while循环" class="headerlink" title="2、 do-while循环"></a>2、 do-while循环</h4><p>do-while循环和while循环很类似，区别在于do-while循环会先执行一次循环体，再做判断，而while循环是必须先判断，在决定是否执行循环体。如果循环条件不成立，while循环一次都不会执行，do-while循环会执行一次循环体。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 基本语法</span>
+
+<span class="token keyword">do</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 循环体</span>
+<span class="token punctuation">}</span><span class="token keyword">while</span><span class="token punctuation">(</span>循环条件<span class="token punctuation">)</span>
+
+
+<span class="token comment" spellcheck="true">/* 
+* 打印5次hello world
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">do</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            i<span class="token operator">++</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span><span class="token keyword">while</span><span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="3、for循环"><a href="#3、for循环" class="headerlink" title="3、for循环"></a>3、for循环</h4><p>for循环也是很常用的一种循环语法，它与while循环的最大区别在于while循环适用于循环次数不确定的场景，如张三参加体能测试，成绩合格就停止循环，否则循环一直进行，这时循环次数是不确定的。for循环适用于循环次数确定的场景，如输出10次“HelloWorld”，很明确要执行10次循环。</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 基本语法</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span>初始化循环遍历<span class="token punctuation">;</span> 循环条件<span class="token punctuation">;</span> 更新循环变量<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 循环体</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment" spellcheck="true">/* 
+* 打印5次hello world
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>while、do-while、for三种循环的区别：</strong></p>
+<ul>
+<li><em>相同点：</em> 都遵循循环四要素，即初始化循环变量、循环条件、循环体、更新循环变量。</li>
+<li><em>不同点：</em> while 和 do-while 适用于循环次数不确定的场景，for适用于循环次数确定的场景；while 和 for 是先判断循环条件，再执行循环体；do-while是先执行循环体，再判断循环条件。</li>
+</ul>
+<h4 id="4、嵌套循环"><a href="#4、嵌套循环" class="headerlink" title="4、嵌套循环"></a>4、嵌套循环</h4><p>上面都是在介绍一维结构的循环，如果想要完成更多复杂的功能，则需要进行循环嵌套。<br>例如：如何使用循环结构，打印如下图形</p>
+<pre><code>    *
+  * * *
+* * * * *
+</code></pre>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token operator">-</span>i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> z <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> z <span class="token operator">&lt;</span> <span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">2</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> z<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">"*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p> <strong>手动终止循环有两种方式：break和continue。两者的区别是，break表示跳出整个循环体；continue表示跳出本次循环，进入下一次循环</strong></p>
+<h2 id="五、数组"><a href="#五、数组" class="headerlink" title="五、数组"></a>五、数组</h2><p>数组就是一种可以存放大量数据类型相同的变量的数据结构，是一个具有相同数据类型的数据集合。数组中的数据必须是同一种数据类型，可以类比现实生活中学校的所有学生、机房里的所有计算机等。我们使用变量来保存数据，需要在内存中开辟一块空间，而数组就是在内存中开辟一串连续的空间来保存数据。</p>
+<p>一个数组由四种基本元素构成，（1）数组名称（2）数组元素（3）元素下标（4）数据类型。数组本身也是一个变量，也需要定义变量名，也就是数组名称。数组中保存的每一个数据都会有一个下标（从0开始），相当于编号，通过编号可以快速检索到对应的元素。</p>
+<h4 id="1、数组"><a href="#1、数组" class="headerlink" title="1、数组"></a>1、数组</h4><p>数组也是一个变量，创建数字的步骤和创建普通变量基本一致，分为如下步骤。</p>
+<ul>
+<li>声明数组：数据类型[] 数组名；如 “ int[] array; ” 表示声明了一个int类型的数组，该数组中只能存放int类型的数据，“ String[] array; ” 表示声明了一个 String类型的数组，该数组中只能存放 String 类型的数据。</li>
+<li>分配内存空间：创建数组必须要指定数组的长度，根据指定长度在内存中开辟一串连续的空间，并且长度不能修改。语法：“ 数组名 &#x3D; new 数据类型[数组长度] ”。例如 “ array&#x3D;new int[6]; ”表示array的长度为6。</li>
+<li>给数组赋值：分配完内存空间就可以向数组中存值，通过下标找到数组中对应的内存空间，完成赋值。如 “ array[0] &#x3D; 1; array[2] &#x3D; 3;”。</li>
+</ul>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">;</span>
+        array <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 声明数组和开辟空间可以使用一行代码编写</span>
+<span class="token comment" spellcheck="true">// int[] array = new int[4];</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>声明数组时，[]可以放在数据类型的后面，也可以放在数组名后面，即 int[] array 和 int array[] 都可以。<br>边声明边赋值有两种方式，如下所示：</p>
+<pre class="line-numbers language-java"><code class="language-java">    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>数组与之前介绍的变量在内存中的保存方式是不同的。内存可以简单分为栈内存和堆内存。基本数据类型的变量和值都保存在栈内存中，在栈内存开辟的空间中直接放入数据。</p>
+<p>引用数据类型的变量保存在栈内存中。而变量的值，也就是引用实际指向的对象，保存在堆内存中，即栈内存保存的是堆内存的地址。什么是引用数据类型?这里可以简单记为只要是通过new关键字创建的变量都是引用类型。</p>
+<p><strong>Java提供了一个工具类，通过调用该工具类的方法可以完成对数组的操作。这个类是 Arrays，它保存在java.util包中，提供了多种操作数组的方法，比如对数组的元素进行排序，求出数组的最大最小值等。</strong></p>
+<h4 id="2、二维数组"><a href="#2、二维数组" class="headerlink" title="2、二维数组"></a>2、二维数组</h4><p>如果一维数组中保存的值是其他数组的内存地址，那这种结构的数组就是二维数组。二维数组的使用与一维数组类似：(1）声明（2）开辟内存空间（3）赋值</p>
+<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Test</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String <span class="token punctuation">[</span><span class="token punctuation">]</span>args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">22</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// 边声明边赋值</span>
+<span class="token comment" spellcheck="true">// int[][] array = {{1,2,3},{4,5,6}};</span>
+<span class="token comment" spellcheck="true">// int[][] array = new int[][]{{1,2,3},{4,5,6}};</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">zerollone</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://zerollone.top/java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">http://zerollone.top/java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">zerollone</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+                                    <span class="chip bg-color">Java基础语法</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/java%E5%9F%BA%E7%A1%80/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+                    <div class="card-image">
+                        
+                        <img src="https://x0.ifengimg.com/res/2020/47DC641E40B34CEF2A209A9B595031C97F0EE1C5_size311_w1920_h1200.jpeg" class="responsive-img" alt="Java基础语法知识">
+                        
+                        <span class="card-title">Java基础语法知识</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    Java基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+                        <span class="chip bg-color">Java基础语法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="数据结构与算法">
+                        
+                        <span class="card-title">数据结构与算法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构与算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">数据结构与算法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023</span>
+            
+            <a href="/about" target="_blank">zerollone</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">6.7k</span>
+            
+            
+            
+            
+                <span id="busuanzi_container_site_pv" style='display:none'>
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv" style='display:none'>
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2023";
+                        var startMonth = "4";
+                        var startDate = "6";
+                        var startHour = "8";
+                        var startMinute = "1";
+                        var startSecond = "30";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+                        var diffHours = Math.floor((diff / hours) - diffDays * 24 - diffYears * 365 * 24);
+                        var diffMinutes = Math.floor((diff / minutes) - diffHours * 60 - diffDays * 24 * 60 - - diffYears * 365 * 24 * 60);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天 ' + diffHours + " 小时 " + diffMinutes + " 分钟";
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/zerollone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2294869408@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2294869408" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2294869408" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href=" " class="tooltipped" target="_blank" data-tooltip="微信联系我：zerollone" data-position="top" data-delay="50">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+        var pvcountOffset = -53648600;  // 初始化首次数据
+        var uvcountOffset = -31135211;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int); // 停止检测
+            }
+        }
+    });
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
