@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SpringBoot, zerollone">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="同态加密概述, zerollone">
+    <meta name="description" content="基本概念同态加密（Homomorphic Encryption,HE）指将原始数据经过同态加密后，对密文进行特定的运算，得到的密文计算结果在进行同态解密后的得到的明文等价于原始明文数据直接进行相同计算所得到的数据结果。
+历史与发展
+
+197">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SpringBoot | zerollone</title>
+    <title>同态加密概述 | zerollone</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -576,12 +579,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic4.zhimg.com/v2-968849606a25f22fc107312baccbc3af_1440w.jpg?source=172ae18b')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SpringBoot</h1>
+                    <h1 class="description center-align post-title">同态加密概述</h1>
                 </div>
             </div>
         </div>
@@ -605,8 +608,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SpringBoot/">
-                                <span class="chip bg-color">SpringBoot</span>
+                            <a href="/tags/%E5%90%8C%E6%80%81%E5%8A%A0%E5%AF%86/">
+                                <span class="chip bg-color">同态加密</span>
                             </a>
                         
                     </div>
@@ -617,8 +620,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/SpringBoot/" class="post-category">
-                                SpringBoot
+                            <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="post-category">
+                                密码学
                             </a>
                         
                     </div>
@@ -630,28 +633,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-04-07
+                    2023-04-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-12
+                    2023-04-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    92
+                    3.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    10 分
                 </div>
                 
 
@@ -666,29 +669,55 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@SpringBootApplication</span>
-
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-
-<span class="token comment" spellcheck="true">//启动springboot程序，启动spring容器，如果是web项目，启动内嵌的tomcat</span>
-
-SpringApplication<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>Application<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span><span class="token punctuation">}</span>
-
-创建一个spring mvc的controller
-
-<span class="token annotation punctuation">@Controller</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloController</span> <span class="token punctuation">{</span>
-
-    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/boot/hello"</span><span class="token punctuation">)</span>
-    <span class="token keyword">public</span> <span class="token annotation punctuation">@ResponseBody</span> String <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token string">"Hello Spring Boot"</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="http://img.fignft.xyz/1.jpg"></p>
+                <p><strong>基本概念</strong><br>同态加密（Homomorphic Encryption,HE）指将原始数据经过同态加密后，对密文进行特定的运算，得到的密文计算结果在进行同态解密后的得到的明文等价于原始明文数据直接进行相同计算所得到的数据结果。<br><img src="/./images/HE.png"></p>
+<p><strong>历史与发展</strong></p>
+<ul>
+<li>1978年，Rivest、Adleman（RSA中的”R”和”A”）和Dertouzos提出了全同态加密的构想，当时称为“隐私同态”，并于 2009 年由 Craig Gentry 首次构建。目前，同态加密算法主要分为半同态加密，稍微同态加密，全同态加密两大类。</li>
+<li>半同态加密或部分同态加密（Somewhat Homomorphic Encryption,SWHE 或 Partially Homomorphic Encryption,PHE）：支持对密文进行部分形式的计算，如仅支持加法、仅支持乘法、支持有限次加法和乘法。半同态加密主要包括以RSA算法和ElGamal算法为代表的乘法同态加密、以Paillier算法为代表的加法同态加密</li>
+<li>稍微同态加密（SHE）：支持有限操作（例如加法、乘法）直到某个复杂的的方案，但是这些操作只能执行一定次数。主要包括以BGN算法为代表的有限次全同态加密。</li>
+<li>全同态加密（Fully Homomorphic Encryption,FHE）：支持对密文进行任意形式的计算。全同态加密算法起源于2009年Gentry提出的方案，后续的方案大多都是基于格代数结构构造。全同态加密算法只要包括以Gentry方案为代表的第一代方案，以BGV方案和BFV方案为代表的第二代方案，以GSW方案以及支持浮点数近似计算的CKKS方案为代表的第三代方案。目前，BGV方案、BFV方案、CKKS方案均在同态加密开源库中得以实现。<br><img src="/./images/HE01.png"></li>
+</ul>
+<p><strong>标准化进展</strong></p>
+<ul>
+<li><p>半同态加密标准化<br>2019年5月，国际标准化组织ISO发布了同态加密标准（ISO&#x2F;IEC 18033-6:2019）。该标准仅涉及半同态加密，具体包含两种较为成熟的半同态加密机制：ElGamal乘法同态加密和Paillier加法同态加密，并规定了参与实体的参数和密钥生成、数据加密、密文数据解密、密文数据同态运算等步骤的具体过程。</p>
+</li>
+<li><p>全同态加密标准化<br>2017年7月，来自学术界、工业界和政界的相关领域研究人员组成了全同态加密标准化开放联盟HomomorphicEncryption.org，在微软研究院举办了首届全同态加密标准化研讨会，开始共同推进全同态加密标准草案的编写工作，并发布了全同态加密安全标准、API标准、应用标准三份白皮书。迄今为止，HomomorphicEncryption.org在三年内已举办五届全同态加密标准化会议，参与成员包括微软、三星SDS、英特尔、IBM、谷歌、万事达卡等企业，以及NIST、ITU等机构的代表和各大高校的学者。在标准化进展方面，HomomorphicEncryption.org已分别于2018年3月和11月发布和更新了全同态加密标准草案。</p>
+</li>
+</ul>
+<h1 id="同态加密的具体过程"><a href="#同态加密的具体过程" class="headerlink" title="同态加密的具体过程"></a>同态加密的具体过程</h1><p><img src="/./images/HE02.png"><br>1、Alice对数据进行加密，并把加密后的数据发送给Cloud<br>2、Alice向Cloud提交数据的处理方法，用函数 f 来表示<br>3、Cloud在函数f下对数据进行处理，并且将处理后的结果发送给Alice<br>4、Alice对数据进行解密，得到结果</p>
+<p><strong>同态加密方案应该拥有的函数</strong></p>
+<ul>
+<li>KeyGen函数：密钥生成函数，这个函数由Alice运行，用于产生加密数据Data所用的密钥Key，应该还有一些公开常数PP<br>(Public Parameter)</li>
+<li>Encrypt函数：加密函数，这个函数由Alice运行，用key对用户数据Data进行加密，得到密文CT（Ciphertext）</li>
+<li>Evaluate函数：评估函数，这个函数由Cloud运行，在用户给定的数据处理方法f下，对密文进行操作，使得结果相当于用户用密钥key对Data进行加密</li>
+<li>Decrypt函数：解密函数，这个函数由Alice运行，用于得到cloud处理的结果f（Data）</li>
+</ul>
+<p><strong>对于同态加密，其密码套件具备延展性，也就是说无法保证数据的完整性，这并非是缺陷，反而时有意为之的，能够使用户易于操作加密数据</strong><br><strong>延展性时加密算法的属性之一，用户可利用延展性将密文转换为改变了原始文本含义的另一有效加密文本，而且，转换数据的用户甚至无需知道或推测原始明文数据是什么</strong></p>
+<h1 id="主流同态加密算法"><a href="#主流同态加密算法" class="headerlink" title="主流同态加密算法"></a>主流同态加密算法</h1><h3 id="1、半同态加密算法"><a href="#1、半同态加密算法" class="headerlink" title="1、半同态加密算法"></a>1、半同态加密算法</h3><p><strong>乘法同态加密算法</strong><br>满足乘法同态特性的典型加密算法包括1977年提出的RSA公钥加密算法和1985年提出的ElGamal公钥加密算法  </p>
+<p><strong>加法同态加密算法</strong><br>Paillier加密算法是1999年由paillier提出的一种基于复合剩余类问题的公钥加密算法，同时也是目前最为常用且最具实用性的加法同态加密算法，在具体的应用场景中实现了应用。</p>
+<h3 id="2、稍微（特定）同态加密"><a href="#2、稍微（特定）同态加密" class="headerlink" title="2、稍微（特定）同态加密"></a>2、稍微（特定）同态加密</h3><p><strong>有限次全同态加密算法</strong><br>2005年提出的Boneh-Goh-Nissim方案是一种基于双线性映射的公钥密码方案，支持任意加法同态和一次乘法同态运算。方案中的加法同态基于类似paillier算法的思想，而一次乘法同态基于双线性对映射的运算性质。由于双线性对映射算法会使得密文所在的群发生变化，因此只能支持一次乘法同态运算，但是对乘法后的密文支持作加法运算</p>
+<h3 id="3、全同态加密"><a href="#3、全同态加密" class="headerlink" title="3、全同态加密"></a>3、全同态加密</h3><p><strong>第一代全同态加密方案 – Gentry方案</strong><br>Gentry方案是一种基于电路模型的全同态加密算法，支持对每个比特进行加法和乘法同态运算。Gentry方案的基本思想是构造支持有限次同态运算的同态加密算法并引入“Bootstrapping”方法控制运算过程中的噪音增长。<br>“Bootstrapping”方法通过将解密过程本身转化为同态运算电路，并生成新的公私钥对对原私钥和含有噪音的原密文进行加密，然后用原私钥的密文对原密文的密文进行解密过程的同态运算，即可得到不含噪音的新密文。但是，由于解密过程本身的运算十分复杂，运算过程中也会产生大量噪音，为了给必要的同态运算需求至少预留足够进行一次乘法运算的噪音增长空间，需要对预先解密电路进行压缩简化，即将解密过程的一些操作尽量提前到加密时完成</p>
+<p><strong>第二代全同态加密方案 – BGV&#x2F;BFV方案</strong><br>第二代全同态加密方案通常基于LWR&#x2F;RLWR假设，其安全性基于代数格上的困难问题，典型方案包括BGV方案和BFV方案。</p>
+<ul>
+<li>BGV方案（Brakerski-Gentry-Vaikuntanathan）是目前主流的全同态加密算法中效率最高的方案。在BGV方案中，密文和密钥均以向量表示，而密文的乘积和对应的密钥乘积则为张量，因此密文乘法运算会造成密文维数的爆炸式增长，导致方案只能进行常数次的乘法运算。BGV方案采用密钥交换技术控制密文向量的维数膨胀，在进行密文计算后通过密钥交换将膨胀的密文维数恢复为原密文的维数。同时，BGV方案可采用模交换技术替代Gentry方案中的“Bootstrapping”过程，用于控制密文同态运算产生的噪声增长，而不需要通过复杂的解密电路实现。因此，在每次进行密文乘法运算后，首先需要通过密钥交换技术降低密文的维数，然后通过模交换技术降低密文的噪声，从而能够继续进行下一次计算。</li>
+<li>BFV（Brakerski&#x2F;Fan-Vercauteren）方案是与BGV方案类似的另一种第二代全同态加密方案，同样可基于LWE和RLWE构造。BFV方案不需要通过模交换进行密文噪声控制，但同样需要通过密钥交换解决密文乘法带来的密文维数膨胀问题。</li>
+</ul>
+<p><strong>第三代全同态加密方案 – GSW方案</strong><br>GSW（Gentry-Sahai-Waters）方案是一种基于近似特征向量的全同态加密方案。该方案基于LWE并可推广至RLWE，但其的性能不如BGV方案等其他基于RLWE的方案。GSW方案的密文为矩阵的形式，而矩阵相乘并不会导致矩阵维数的改变，因此GSW方案解决了以往方案中密文向量相乘导致的密文维数膨胀问题，无需进行用于降低密文维数的密钥交换过程。</p>
+<p><strong>浮点数全同态加密方案 – CKKS方案</strong><br>CKKS（Cheon-Kim-Kim-Song）方案是2017年提出的一种新方案，支持针对实数或复数的浮点数加法和乘法同态运算，得到的计算结果为近似值，适用于机器学习模型训练等不需要精确结果的场景。由于浮点数同态运算在特定场景的必要性，HElib和SEAL两个全同态加密开源库均支持了CKKS方案。</p>
+<h1 id="全同态加密算法开源库"><a href="#全同态加密算法开源库" class="headerlink" title="全同态加密算法开源库"></a>全同态加密算法开源库</h1><ul>
+<li>HElib</li>
+<li>SEAL</li>
+</ul>
+<h1 id="同态加密应用场景"><a href="#同态加密应用场景" class="headerlink" title="同态加密应用场景"></a>同态加密应用场景</h1><p>同态加密的概念最初提出用于解决云计算等外包计算中的数据机密性保护问题，防止云计算服务提供商获取敏感明文数据。随着区块链、隐私计算等新型领域的发展及其对隐私保护的更高要求，同态加密的应用拓展到了更为丰富的领域。</p>
+<ul>
+<li><p>1、云计算<br>在云计算或外包计算中，用户为了节约自身的软硬件成本，可将计算和存储需求外包给云服务提供商，利用云服务提供商强大的算力资源实现数据的托管存储和处理。但是，将明文数据直接交给云服务器具有一定的安全风险，而传统的加密存储方式则无法实现对密文数据的直接计算，因此如何同时实现数据的机密性和可计算性成为了一个难题，同态加密的出现为这一场景的实现提供了可能性。<br>在传统的云存储与计算解决方案中，用户需要信任云服务器提供商不会窃取甚至用户数据，而基于同态加密的云计算模型可在根本上解决这一矛盾。首先，用户使用同态加密算法和加密密钥对数据进行加密，并将密文发送给云服务器；云服务器在无法获知明文数据的情况下按照用户给定的程序对密文进行计算，并将密文计算结果返回给用户；用户使用同态加密算法和解密密钥对密文计算结果进行解密，所得结果与直接对明文进行相同计算的结果等价。</p>
+</li>
+<li><p>2、在区块链中应用</p>
+</li>
+<li><p>3、在联邦学习中的应用</p>
+</li>
+</ul>
+<h1 id="发展现状"><a href="#发展现状" class="headerlink" title="发展现状"></a>发展现状</h1><p>目前，全同态加密算法仍处于以学术界研究为主的发展阶段，现有方案均存在计算和存储开销大等无法规避的性能为题，距离高效的工程应用还有着不小的差距，同时面临国际与国内相关标准的缺失。因此，在尝试同态加密落地应用时，可以考虑利用Paillier加法同态加密算法等较为成熟且性能较好的半同态加密算法，解决只存在加法或者数乘同态运算需求的应用场景，或通过将复杂计算需求转化为只存在加法或数乘运算的形式实现全同态的近似替代</p>
 
                 
             </div>
@@ -715,7 +744,7 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zerollone.top/83dd.html">http://zerollone.top/83dd.html</a>
+                    <a href="http://zerollone.top/20a9.html">http://zerollone.top/20a9.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -753,8 +782,8 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SpringBoot/">
-                                    <span class="chip bg-color">SpringBoot</span>
+                                <a href="/tags/%E5%90%8C%E6%80%81%E5%8A%A0%E5%AF%86/">
+                                    <span class="chip bg-color">同态加密</span>
                                 </a>
                             
                         </div>
@@ -837,13 +866,12 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/9ca4.html">
+                <a href="/3187.html">
                     <div class="card-image">
                         
+                        <img src="https://img1.baidu.com/it/u=679942290,220076699&fm=253&fmt=auto&app=120&f=JPEG?w=1200&h=796" class="responsive-img" alt="《比特币-点对点电子现金系统》（Bitcoin:A Peer-to-Peer Electronic Cash System）">
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="solidity">
-                        
-                        <span class="card-title">solidity</span>
+                        <span class="card-title">《比特币-点对点电子现金系统》（Bitcoin:A Peer-to-Peer Electronic Cash System）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -854,14 +882,14 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-13
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/solidity/" class="post-category">
-                                    solidity
+                            <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" class="post-category">
+                                    区块链
                                 </a>
                             
                             
@@ -871,8 +899,8 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/solidity/">
-                        <span class="chip bg-color">solidity</span>
+                    <a href="/tags/%E6%AF%94%E7%89%B9%E5%B8%81/">
+                        <span class="chip bg-color">比特币</span>
                     </a>
                     
                 </div>
@@ -886,13 +914,12 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/46eb.html">
+                <a href="/9de6.html">
                     <div class="card-image">
                         
+                        <img src="https://x0.ifengimg.com/res/2020/47DC641E40B34CEF2A209A9B595031C97F0EE1C5_size311_w1920_h1200.jpeg" class="responsive-img" alt="Java基础 - 面向对象">
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Spring">
-                        
-                        <span class="card-title">Spring</span>
+                        <span class="card-title">Java基础 - 面向对象</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -903,14 +930,14 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Spring/" class="post-category">
-                                    Spring
+                            <a href="/categories/Java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    Java基础
                                 </a>
                             
                             
@@ -920,8 +947,8 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Spring/">
-                        <span class="chip bg-color">Spring</span>
+                    <a href="/tags/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                        <span class="chip bg-color">Java面向对象</span>
                     </a>
                     
                 </div>
