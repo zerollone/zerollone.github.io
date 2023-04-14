@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, zerollone">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="密码学中的几种攻击模式, zerollone">
+    <meta name="description" content="唯密文攻击
+
+密码分析者除了拥有截获的密文外（密码算法是公开的），没有其它可以利用的消息。密码分析者的任务是恢复尽可能多的明文，或者最好能推算出解密密钥，这样就很容易解出被加密的信息。这种攻击的方法至少可采用穷举搜索法，即对截获的密文依次用">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | zerollone</title>
+    <title>密码学中的几种攻击模式 | zerollone</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -576,12 +578,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic4.zhimg.com/v2-968849606a25f22fc107312baccbc3af_1440w.jpg?source=172ae18b')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">密码学中的几种攻击模式</h1>
                 </div>
             </div>
         </div>
@@ -605,8 +607,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/solidity/">
-                                <span class="chip bg-color">solidity</span>
+                            <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/">
+                                <span class="chip bg-color">密码学</span>
                             </a>
                         
                     </div>
@@ -617,8 +619,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/java/" class="post-category">
-                                java
+                            <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="post-category">
+                                密码学
                             </a>
                         
                     </div>
@@ -630,28 +632,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-04-07
+                    2023-04-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-12
+                    2023-04-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    92
+                    738
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -666,29 +668,26 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@SpringBootApplication</span>
-
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-
-<span class="token comment" spellcheck="true">//启动springboot程序，启动spring容器，如果是web项目，启动内嵌的tomcat</span>
-
-SpringApplication<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>Application<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span><span class="token punctuation">}</span>
-
-创建一个spring mvc的controller
-
-<span class="token annotation punctuation">@Controller</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloController</span> <span class="token punctuation">{</span>
-
-    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/boot/hello"</span><span class="token punctuation">)</span>
-    <span class="token keyword">public</span> <span class="token annotation punctuation">@ResponseBody</span> String <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token string">"Hello Spring Boot"</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://img.fignft.xyz/1.jpg"></p>
+                <p><strong>唯密文攻击</strong></p>
+<blockquote>
+<p>密码分析者除了拥有截获的密文外（密码算法是公开的），没有其它可以利用的消息。密码分析者的任务是恢复尽可能多的明文，或者最好能推算出解密密钥，这样就很容易解出被加密的信息。这种攻击的方法至少可采用穷举搜索法，即对截获的密文依次用所有的密钥尝试，直到得到有意义的明文。只要有足够多的计算资源和存储资源，理论上穷举搜索是可以成功的，但实际上，任何一种能保障安全要求的算法复杂度都是实际攻击者无法承受的。在这种情况下进行密码破译是最困难的，经不起这种攻击的密码体制被认为是完全不安全的（类似网络通信中仅仅进行搭线窃听）</p>
+</blockquote>
+<p><strong>已知明文攻击</strong></p>
+<blockquote>
+<p>密码分析者不仅掌握了相当数量的密文，还有一些已知的明-密文对可供利用。密码分析者的任务是用密文信息推导出解密密钥或导出一个替代算法，此算法可以对所获得的密文恢复出相应的明文。在现实中，密码分析者可能通过各种手段得到更多的信息，即得到若干个明-密文对并不是十分困难的事，而且明文消息往往采用某种特定的格式，如电子现金传送消息总有一个标准的报头或标题等等。对于现代密码体制的基本要求：不仅要经受得住唯密文攻击，而且还要经受得住已知明文攻击</p>
+</blockquote>
+<p><strong>选择明文攻击</strong></p>
+<blockquote>
+<p>密码分析者不仅能够获得一定数量的明-密文对，还可以选择任何明文并在使用同一未知密钥的情况下能得到相应的密文。如果攻击者在加密系统中能选择特定的明文消息，则通过该明文消息对应的密文就有可能确定密钥的结构或获取更多关于密钥的信息。选择明文攻击比已知明文攻击更有效，这种情况往往是密码分析者通过某种手段暂时控制加密机。</p>
+</blockquote>
+<p><strong>选择密文攻击</strong></p>
+<blockquote>
+<p>选择密文攻击中分析者可以“选择获得一些密文以及对应的明文”。这种攻击主要攻击公开密钥密码体制，特别是攻击其数字签名。</p>
+</blockquote>
+<p><strong>选择文本攻击</strong></p>
+<blockquote>
+<p>此时攻击者获得了更强的攻击能力，在攻击时不仅可以构造多个明文获取相应的密文，还可以构造多个密文获取相应的明文，也就是以上两种攻击的结合体。</p>
+</blockquote>
 
                 
             </div>
@@ -715,7 +714,7 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zerollone.top/3eeb.html">http://zerollone.top/3eeb.html</a>
+                    <a href="http://zerollone.top/9719.html">http://zerollone.top/9719.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -753,8 +752,8 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/solidity/">
-                                    <span class="chip bg-color">solidity</span>
+                                <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/">
+                                    <span class="chip bg-color">密码学</span>
                                 </a>
                             
                         </div>
@@ -837,13 +836,12 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/46eb.html">
+                <a href="/4ee0.html">
                     <div class="card-image">
                         
+                        <img src="https://qqpublic.qpic.cn/qq_public/0/0-2630077680-A1F5EC5215E9FE2BF30C6A7DD4523888/0?fmt=jpg&size=76&h=498&w=890&ppv=1.jpg" class="responsive-img" alt="区块链简介">
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Spring">
-                        
-                        <span class="card-title">Spring</span>
+                        <span class="card-title">区块链简介</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -854,14 +852,14 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-14
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Spring/" class="post-category">
-                                    Spring
+                            <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" class="post-category">
+                                    区块链
                                 </a>
                             
                             
@@ -871,8 +869,8 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Spring/">
-                        <span class="chip bg-color">Spring</span>
+                    <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">
+                        <span class="chip bg-color">区块链</span>
                     </a>
                     
                 </div>
@@ -886,13 +884,12 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/12ac.html">
+                <a href="/c8a3.html">
                     <div class="card-image">
                         
+                        <img src="https://x0.ifengimg.com/res/2020/47DC641E40B34CEF2A209A9B595031C97F0EE1C5_size311_w1920_h1200.jpeg" class="responsive-img" alt="Java基础-面向对象进阶">
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="SpringMVC">
-                        
-                        <span class="card-title">SpringMVC</span>
+                        <span class="card-title">Java基础-面向对象进阶</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -903,14 +900,14 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SpringMVC/" class="post-category">
-                                    SpringMVC
+                            <a href="/categories/Java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    Java基础
                                 </a>
                             
                             
@@ -920,8 +917,12 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SpringMVC/">
-                        <span class="chip bg-color">SpringMVC</span>
+                    <a href="/tags/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+                        <span class="chip bg-color">Java基础语法</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1/">
+                        <span class="chip bg-color">面对对象</span>
                     </a>
                     
                 </div>

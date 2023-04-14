@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, zerollone">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="区块链简介, zerollone">
+    <meta name="description" content="区块链背景
+现如今大多数的交易是以第三方机构为中心的互联网交易模式：买家将所需付出的资金存储在可信第三方机构，卖家为买家提供商品，服务后，当双方都确定得到了对方开始的承诺，可信第三方机构完成资金的转移，交易完成。
+
+基于第三方信任中心的交易">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | zerollone</title>
+    <title>区块链简介 | zerollone</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -576,12 +579,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://qqpublic.qpic.cn/qq_public/0/0-2630077680-A1F5EC5215E9FE2BF30C6A7DD4523888/0?fmt=jpg&size=76&h=498&w=890&ppv=1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">区块链简介</h1>
                 </div>
             </div>
         </div>
@@ -605,8 +608,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/solidity/">
-                                <span class="chip bg-color">solidity</span>
+                            <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">
+                                <span class="chip bg-color">区块链</span>
                             </a>
                         
                     </div>
@@ -617,8 +620,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/java/" class="post-category">
-                                java
+                            <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" class="post-category">
+                                区块链
                             </a>
                         
                     </div>
@@ -630,28 +633,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-04-07
+                    2023-04-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-12
+                    2023-04-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    92
+                    3.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    12 分
                 </div>
                 
 
@@ -666,29 +669,171 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@SpringBootApplication</span>
-
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-
-<span class="token comment" spellcheck="true">//启动springboot程序，启动spring容器，如果是web项目，启动内嵌的tomcat</span>
-
-SpringApplication<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>Application<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token punctuation">}</span><span class="token punctuation">}</span>
-
-创建一个spring mvc的controller
-
-<span class="token annotation punctuation">@Controller</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloController</span> <span class="token punctuation">{</span>
-
-    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/boot/hello"</span><span class="token punctuation">)</span>
-    <span class="token keyword">public</span> <span class="token annotation punctuation">@ResponseBody</span> String <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token string">"Hello Spring Boot"</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://img.fignft.xyz/1.jpg"></p>
+                <h1 id="区块链背景"><a href="#区块链背景" class="headerlink" title="区块链背景"></a>区块链背景</h1><ul>
+<li><p>现如今大多数的交易是以第三方机构为中心的互联网交易模式：<strong>买家将所需付出的资金存储在可信第三方机构，卖家为买家提供商品，服务后，当双方都确定得到了对方开始的承诺，可信第三方机构完成资金的转移，交易完成。</strong></p>
+</li>
+<li><p>基于第三方信任中心的交易方式的不足</p>
+<blockquote>
+<p>过于集中：遭受外界严重人为攻击或者灾难时容易崩溃，容灾能力较差<br>增加交易成本：基于第三方信任中心的交易为了提高信任度，必然要付出额外的信任代价，从而增加了交易成本<br>信任中心不总可靠：信任中心是有团队维护的，可能会有内部人员出于自身利益而偷偷在机构内部发生攻击，损害用户利益；信任中心可能回考虑自身整体利益采取极端措施。</p>
+</blockquote>
+</li>
+<li><p>举例说明</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>例子：微信组局</th>
+<th>在区块链中的概念</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>接龙发帖</td>
+<td>链式数据结构</td>
+</tr>
+<tr>
+<td>规则：每人发帖&#x3D; 上一个帖子内容 + 下一个编号 + 姓名</td>
+<td>共识机制，根据严格的规则和公开的协议形成的</td>
+</tr>
+<tr>
+<td>规则定下来后，大家自发登记</td>
+<td>去中心化，没有任何一个用户能控制</td>
+</tr>
+<tr>
+<td>在微信群里记录登录情况</td>
+<td>点对点对等网络</td>
+</tr>
+<tr>
+<td>只要联网就能得知最新的发展</td>
+<td>博弈机制</td>
+</tr>
+<tr>
+<td>为了形成40个人的报名记录，至少有40人发40个帖子才够，群友手机里都存档</td>
+<td>分布式（多点备份）、高冗余</td>
+</tr>
+<tr>
+<td>每个帖子大家都能看到，更新的记录是否数字出错，人重复了，每个人都可以检查</td>
+<td>共享帐薄</td>
+</tr>
+<tr>
+<td>群里的人大都认识，各有各的姓名或者代号</td>
+<td>通过公钥密码技术保证陌生人可信</td>
+</tr>
+</tbody></table>
+<ul>
+<li>什么是区块链<blockquote>
+<p>区块链由一个个区块（block）组成。区块很像数据库的记录，每次写入数据，就是创建一个区块<br>区块链是一个<font color="red">分布式账本</font>，一种通过<font color="red">去中心化、去信任</font>的方式集体维护一个可靠数据库的技术方案</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="区块链的相关知识"><a href="#区块链的相关知识" class="headerlink" title="区块链的相关知识"></a>区块链的相关知识</h1><p>Hash函数</p>
+<ul>
+<li><strong>定义</strong>：hash函数是一个公开函数，可以将任意长度的消息M映射成为一个长度较短且长度固定的值 y&#x3D;H(x)，它是一种单向密码体制，即由x计算y是容易的，相反则是计算不可行的。</li>
+<li><strong>Hash函数的特点：</strong><blockquote>
+<p>抗弱碰撞性：对于给定的消息x1，要发现另外一个消息x2，满足H(x1)&#x3D;H(x2)在计算上是不可行的。<br>抗强碰撞性：找任意一对不同的消息x1，x2，使H(x1)&#x3D;H(x2)在计算上是不可行的<br>雪崩效应：当一个输入位发生变化时，输出位将有一半会发生变化。</p>
+</blockquote>
+</li>
+</ul>
+<p>Merkle树</p>
+<ul>
+<li><strong>定义：</strong> Merkle哈希树是一类基于哈希值的二叉树或多叉树，其叶子节点上的值通常为数据块的哈希值，而非叶子节点上的值是将该节点的所有子节点的组合结果的哈希值。</li>
+</ul>
+<p>非对称密码体系</p>
+<ul>
+<li><strong>定义：</strong> 非对称加密体系也称为公钥体系，加解密时加密方拥有公钥和私钥，加密方可以将公钥发送给其他相关方，私钥严格自己保留。非对称加密算法一般比较复杂执行时间相对对称加密较长，好处是在于无密钥分发问题。常见的其他非对称加密算法由RSA,ECC,区块链中主要使用ECC椭圆曲线算法。</li>
+</ul>
+<p>数字签名</p>
+<ul>
+<li><strong>定义：</strong> 数字签名又称为公钥数字签名，是一种类似于写在纸上的物理签名。数字签名主要用于数据更改的签名者身份识别以及抗抵赖。</li>
+<li><strong>数字签名的特点：</strong><blockquote>
+<p>只有自己可以签署自己的数字签名，但是他人可以验证签名是否是你签发<br>数字签名需要和具体的数字文档绑定，就好比现实中你的签名应该和纸质媒介绑定<br>数字签名不可伪造</p>
+</blockquote>
+</li>
+<li><strong>在比特币中使用的数字签名：</strong>ECSDA（Elliptic Curve Digital Signature Algorithm）</li>
+</ul>
+<p>共识算法</p>
+<ul>
+<li><strong>定义：</strong> 指在分布式系统中多个节点之间对某个事情（例如多尔衮事务请求，先执行谁？）达成一致看法的过程。因此，达成某种共识并不意味着就保障了一致性。</li>
+</ul>
+<h1 id="比特币-–-区块链技术的摇篮"><a href="#比特币-–-区块链技术的摇篮" class="headerlink" title="比特币 – 区块链技术的摇篮"></a>比特币 – 区块链技术的摇篮</h1><ul>
+<li><p><strong>比特币钱包：</strong> 钱包不是用来存放比特币，而是存放你的公钥和私钥。你是否拥有某个钱包地址，是由私钥证明的，所以一定要保护好私钥。这是非常重要的，如果你的私钥被偷了，你的比特币也就等于没有了，因为他人可以冒用你的身份，把钱包里面的钱都转走。</p>
+</li>
+<li><p><strong>基本交易过程：</strong></p>
+<blockquote>
+<p>1、新交易创建<br>2、交易通过P2P网络传播<br>3、交易验证<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 付款人地址：合法的地址<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 付款人对交易的签字确认：确保交易内容不被篡改<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 付款人资金的来源ID：从哪个交易的输出作为本次交易的输入<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 交易的金额：多少钱，跟输入的差额为交易的服务费<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 收款人地址：合法的地址<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 时间戳：交易何时能生效<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 交易是否合法：包括地址是否合法、发起交易者是否是输入地址的合法拥有者，是否是未经使用的交易<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 交易的输入之和是否大于输出之和</p>
+<p>4、验证结果通过P2P网络传播<br>5、交易写入账本</p>
+</blockquote>
+</li>
+<li><p><strong>交易确认与区块链：</strong> 确认交易的真实性以后，交易还不算完成。交易数据必须写入区块链，才算成立，对方才能真正收到钱。根据比特币协议，一个区块的大小最大是1MB，而一笔交易大概是500字节左右，因此一个区块最多可以包含2000多笔交易。矿工负责把这2000多笔交易打包在一起，组成一个区。</p>
+<blockquote>
+<p>区块链包含区块头和区块主体，区块头包含父哈希、Merkle根、时间戳、难度、随机数等，区块主体包含此区块中的所有交易信息。</p>
+</blockquote>
+</li>
+<li><p><strong>挖矿：</strong></p>
+<blockquote>
+<p>矿工收集到2000条交易时，形成新的区块，串联到区块链中<br>矿工计算Hash的过程叫做采矿，这需要大量的计算，矿工之间也在竞争，谁先算出Hash，谁就能第一个添加新区快进入区块链，从而享受这个区块的全部收益，而其他矿工将一无所获<br>每个区块的奖励最初是50个比特币，每隔21万个区块自动减半，即4年时间，目前，奖励为12.5个，最终比特币总量稳定在2100万个。<br>每10分钟左右生成一个不超过1MB大小的区块，串联到最长的链尾部，每个区块的成功提交者可以得到系统的比特币奖励</p>
+</blockquote>
+</li>
+<li><p><strong>为什么挖矿很难？？？</strong> 采矿不就是用计算机算出一个hash吗，这可是计算机的强项，但是不是任意一个Hash都可以，只有满足条件的hash才会被区块链所接受，区块头包含一个难度系数，这个值决定了计算Hash的难度</p>
+<blockquote>
+<p>区块链协议规定，使用一个常量除以难度系数，可以得到目标值。显然，难度系数越大，目标值就越小<br>哈希的有效性跟目标值密切相关，只有小于目标值的哈希才是有效的，否则哈希无效，必须重算。由于目标值非常小，哈希小于该值的机会及其渺茫，可能计算10亿次，才能算中一次，这就是采矿如此之慢的根本原因。<br>当前区块的哈希由区块头唯一决定。如果对同一个区块反复计算哈希，这意味着，区块头必须不停地变化，否则不可能算出不一样地哈希。区块头里面所有地特征值都是固定的，为了让区块头产生变化，中本聪故意增加了一个随机项，叫做Nonce<br>矿工的作用其实就是猜出Nonce的值，使得区块头的哈希可以小于目标值，从而能够写入区块链，Nonce是非常难猜的，目前只能通过穷举法一个一个试错。<br>采矿具有随机性，没法保证正好十分钟产出一个区块，有时一分钟就算出来了，有时几个小时可能也没结果，为了将产出速率恒定在十分钟，中本聪还设计了难度系数的动态调节机制。他规定，难度系数每两周（2016个区块）调整一次。如果这两周里面，区块的平均生成速度是9分钟，就意味着比法定速度快了10%，因此接下来的难度系数就要调高10%；如果平均生成速度是11分钟，就意味着比法定速度慢了10%，因此接下来的难度系数就要调低10%。<br>难度系数越调越高（目标值越来越小），导致了采矿越来越难</p>
+</blockquote>
+</li>
+<li><p><strong>挖矿难度的升级</strong></p>
+<blockquote>
+<p>早期，开采一个新链奖励50个比特币，其难度相当于3个骰子扔出点数小于5<br>后来，开采一个新链奖励25个比特币，其难度相当于100个骰子扔出点数小于150<br>在后来，开采一个新链奖励12.5个比特币，其难度相当于一亿个骰子扔出点数小于一亿零五十<br>现在，挖矿算法大比拼，仍骰子的速度（挖矿速度）决定收益</p>
+</blockquote>
+</li>
+<li><p><strong>比特币运行步骤</strong> </p>
+<blockquote>
+<p>新的交易向全网进行广播<br>每一个节点都将收到的交易信息纳入一个区块中<br>每个节点都尝试在自己的区块中找到一个具有足够难度的工作量证明<br>当一个节点找到了一个工作量证明，它就向全网进行广播<br>当且仅当包含在该区块中的所有交易都是有效的且之前未存在过的，其他节点才认同该区块的有效性<br>其他节点表示他们接受该区块，而表示接受的方法。则是在跟随该区块的末尾，制造新的区块以延长该链条，而将被接受区块的随机散列值视为区块的随机散列值<br>一般来说，每一笔交易，必须经过6次区块确认，也就是6个十分钟记账，才能最终在区块链上被承认合法</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="区块链的概念及本质"><a href="#区块链的概念及本质" class="headerlink" title="区块链的概念及本质"></a>区块链的概念及本质</h1><p><strong>区块链概念：</strong> 区块链技术是以密码学、P2P网络为基础，将特定结构数据按一定方法组织为区块，然后把这些数据块时间按时间先后次序以链式结构组织成为一个数据链，并通过密码学技术和共识机制保证数据的完整性和不可伪造性，基于一定业务逻辑采用可自动执行的机制实现区块数据的动态生成、验证、同步的分布式计算范性</p>
+<ul>
+<li><p><strong>区块链结构</strong><br><img src="D:/CSNDFile/Cryptography/images/区块链结构.PNG" alt="quKuaiLianJieGou"></p>
+</li>
+<li><p><strong>区块的链接</strong><br><img src="/./images/%E5%8C%BA%E5%9D%97%E7%9A%84%E9%93%BE%E6%8E%A5.PNG" alt="quKuaiDeLianJie"></p>
+</li>
+<li><p><strong>区块链诞生的意义</strong></p>
+<blockquote>
+<p>去中心化：整个网络没有中心化的硬件或机构，任意节点间的权利和义务是均等的<br>高度透明：开源的程序，保证了帐薄和商业规则可被所有人审查<br>集体维护：系统中的数据块由整个系统中所有节点共同维护，每个节点分析权利和义务<br>隐私保护：由于区块链的技术解决了信任的问题，因此交易双方没有必要了解对方，交易在匿名下进行的<br>去信任化：从技术上保证交易的进行，在没有第三方机构的情况下</p>
+</blockquote>
+</li>
+<li><p><strong>区块链的分类</strong></p>
+<blockquote>
+<p>公有链：任何人都可以加入网络写入和访问数据；任何人在任何地理位置都可以参与共识；每秒2-30次数据写入<br>联盟链：授权公司和组织才能加入网络；参与共识、写入及查询数据都可以通过授权控制，可实名参与过程，可满足监管，每秒1000次以上的数据写入<br>私有链：使用范围控制在一个公司范围内；改善可审计性，不完全解决信任问题；每秒1000次以上的数据写入</p>
+</blockquote>
+</li>
+<li><p><strong>区块链技术的演进</strong></p>
+<blockquote>
+<p>区块链1.0：数字货币去中心化<br>区块链2.0：智能合约；数字资产；金融应用<br>区块链3.0：超越货币、金融范围的区块链应用；区块链社会</p>
+</blockquote>
+</li>
+<li><p><strong>区块链的应用</strong></p>
+</li>
+<li><p>金融服务</p>
+</li>
+<li><p>医疗健康</p>
+</li>
+<li><p>IP版权</p>
+</li>
+<li><p>教育</p>
+</li>
+<li><p>物联网</p>
+</li>
+<li><p>共享经济</p>
+</li>
+<li><p>通信</p>
+</li>
+<li><p>社会管理</p>
+</li>
+<li><p>慈善公益</p>
+</li>
+<li><p>文化娱乐</p>
+</li>
+</ul>
 
                 
             </div>
@@ -715,7 +860,7 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zerollone.top/3eeb.html">http://zerollone.top/3eeb.html</a>
+                    <a href="http://zerollone.top/4ee0.html">http://zerollone.top/4ee0.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -753,8 +898,8 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/solidity/">
-                                    <span class="chip bg-color">solidity</span>
+                                <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">
+                                    <span class="chip bg-color">区块链</span>
                                 </a>
                             
                         </div>
@@ -833,17 +978,17 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/46eb.html">
+                <a href="/4ee0.html">
                     <div class="card-image">
                         
+                        <img src="https://qqpublic.qpic.cn/qq_public/0/0-2630077680-A1F5EC5215E9FE2BF30C6A7DD4523888/0?fmt=jpg&size=76&h=498&w=890&ppv=1.jpg" class="responsive-img" alt="区块链简介">
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Spring">
-                        
-                        <span class="card-title">Spring</span>
+                        <span class="card-title">区块链简介</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -853,26 +998,27 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Spring/" class="post-category">
-                                    Spring
+                            <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" class="post-category">
+                                    区块链
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Spring/">
-                        <span class="chip bg-color">Spring</span>
+                    <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">
+                        <span class="chip bg-color">区块链</span>
                     </a>
                     
                 </div>
@@ -886,13 +1032,12 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/12ac.html">
+                <a href="/9719.html">
                     <div class="card-image">
                         
+                        <img src="https://pic4.zhimg.com/v2-968849606a25f22fc107312baccbc3af_1440w.jpg?source=172ae18b" class="responsive-img" alt="密码学中的几种攻击模式">
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="SpringMVC">
-                        
-                        <span class="card-title">SpringMVC</span>
+                        <span class="card-title">密码学中的几种攻击模式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -903,14 +1048,14 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SpringMVC/" class="post-category">
-                                    SpringMVC
+                            <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="post-category">
+                                    密码学
                                 </a>
                             
                             
@@ -920,8 +1065,8 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SpringMVC/">
-                        <span class="chip bg-color">SpringMVC</span>
+                    <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/">
+                        <span class="chip bg-color">密码学</span>
                     </a>
                     
                 </div>
