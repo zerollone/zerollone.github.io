@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类: 密码学, zerollone">
-    <meta name="description" content="zerollone">
+    <meta name="keywords" content="密码学基础, zerollone">
+    <meta name="description" content="密码学基本概念密码学（Cryptology）是结合数学、计算机科学、电子与通信等学科于一体的交叉学科，研究信息系统安全的科学。起源于保密通信技术。具体来讲，研究信息系统安全保密和认证的一门科学。
+密码编码学，通过变换消息（对信息编码）使其保">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类: 密码学 | zerollone</title>
+    <title>密码学基础 | zerollone</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -587,437 +588,530 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                欲速则不达
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "不积跬步，无以至千里；不积小流，无以成江海",
-                            
-                                "理想的人生一定是靠拼出来的，许愿到不了",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://img2.baidu.com/it/u=3897534045,2640271880&fm=253&fmt=auto&app=138&f=JPEG?w=761&h=500')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">密码学基础</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/">
+                                <span class="chip bg-color">密码学</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="post-category">
+                                密码学
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-04-28
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-04-28
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    9 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h4 id="密码学基本概念"><a href="#密码学基本概念" class="headerlink" title="密码学基本概念"></a>密码学基本概念</h4><p>密码学（Cryptology）是结合数学、计算机科学、电子与通信等学科于一体的交叉学科，研究信息系统安全的科学。起源于保密通信技术。具体来讲，研究信息系统安全保密和认证的一门科学。</p>
+<p>密码编码学，通过变换消息（对信息编码）使其保密的科学和艺术</p>
+<p>密码分析学，在未知密钥的情况下从密文推演出明文或密钥（破解或攻击）的艺术</p>
+<h4 id="密码系统的组成"><a href="#密码系统的组成" class="headerlink" title="密码系统的组成"></a>密码系统的组成</h4><p>一个加密系统是由明文、密文、加密算法、解密算法、密钥五部分组成。</p>
+<blockquote>
+<ul>
+<li>明文：作为加密输入的原始信息，即消息的原始形式</li>
+<li>密文：明文经加密变换后的结果，即消息被加密处理后的形式</li>
+<li>密钥：参与明密文变换的参数</li>
+<li>加密算法：将明文变换为密文的变换函数，相应的变换过程称为加密，即编码的过程 </li>
+<li>解密算法：将密文恢复为明文的变换函数，相应的变换过程称为解密</li>
+</ul>
+</blockquote>
+<p><img src="/./images/8/8-1.png"></p>
+<h4 id="密码系统形式化的定义"><a href="#密码系统形式化的定义" class="headerlink" title="密码系统形式化的定义"></a>密码系统形式化的定义</h4><blockquote>
+<p><strong>The syntax of encryption.</strong> A private-key encryption scheme，or cipher，is comprised of three algorithms: the first is a procedure for generating keys, the second a procedurefor encrypting, and the third a procedure for decrypting. These algorithms have the following functionality:<br>1、The <em>key-generation algorithm</em> <strong>Gen</strong> is a probabilistic algorithm that out-puts a key $k$ chosen according to some distribution that is determinedby the scheme.</p>
+<p>2、The <em>encraption algorithm</em> <strong>Enc</strong> takes as input a key $k$ and a plaintext $m$ and outputs a ciphertext $c$. We denote the encryption of the plaintextm using the key $k$ by $Enc_k(m)$.</p>
+<p>3、The <em>decryption algorithm</em> <strong>Dec</strong> takes as input a key $k$ and a ciphertext $c$ and outputs a plaintext $m$. We denote the decryption of the ciphertext $c$ using the key $k$ by $Dec_k(c)$.</p>
+</blockquote>
+<h4 id="现代密码体制的分类"><a href="#现代密码体制的分类" class="headerlink" title="现代密码体制的分类"></a>现代密码体制的分类</h4><ul>
+<li><p>对称密码体制（Symmetric System）<br>加密密钥和解密密钥相同，又称为秘密密钥体制或单密钥体制。从密钥使用方式上分为分组密码和序列密码。</p>
+</li>
+<li><p>非对称密码体制（Asymmetric System）<br>加密密钥和解密密钥不相同，并且从加密密钥很难推出解密密钥，又称为公钥密码体制。该体制下，用一个密钥进行加密，而用另一个密钥进行解密。参与加密运算的密钥称为加密密钥，又称为公钥；参与解密运算的密钥称为解密密钥，也称为私钥。</p>
+</li>
+</ul>
+<h4 id="密码体制的基本要求"><a href="#密码体制的基本要求" class="headerlink" title="密码体制的基本要求"></a>密码体制的基本要求</h4><ul>
+<li>密码体制既易于实现又便于使用，主要是指加密函数和解密函数都可以高效的计算</li>
+<li>密码体制的安全性是依赖于密钥的安全性，密码算法是公开的</li>
+<li>密码算法安全强度高，密码分析者除了穷举搜索攻击外再找不到更好的攻击方法</li>
+<li>密钥空间应足够大，使得试图通过穷举密钥空间进行搜索的方式在计算上不可行</li>
+</ul>
+<blockquote>
+<p><strong>密码算法公开的意义</strong><br> 有利于增强密码算法的安全性<br>有利于密码技术的推广应用<br>有利于增加用户使用的信心<br>有利于密码技术的发展</p>
+</blockquote>
+<h4 id="密码分析学"><a href="#密码分析学" class="headerlink" title="密码分析学"></a>密码分析学</h4><p>研究如何分析或破解各种密码编码体制的一门科学，密码分析也称为密码破译，是指在密码通信过程中，非授权者在不知道密钥的条件下对密文进行分析，试图得到明文或密钥的过程。解密和密钥破译都是设法将密文还原成明文的过程，但具备的条件不同。</p>
+<p><strong>密码分析分类</strong></p>
+<ul>
+<li><p><strong>唯密文攻击（Ciphertext only），破译者已知：加密算法、待破译的密文</strong></p>
+<blockquote>
+<p>密码分析者除了拥有截获的密文外（密码算法是公开的），没有其它可以利用的消息。密码分析者的任务是恢复尽可能多的明文，或者最好能推算出解密密钥，这样就很容易解出被加密的信息。这种攻击的方法至少可采用穷举搜索法，即对截获的密文依次用所有的密钥尝试，直到得到有意义的明文。只要有足够多的计算资源和存储资源，理论上穷举搜索是可以成功的，但实际上，任何一种能保障安全要求的算法复杂度都是实际攻击者无法承受的。在这种情况下进行密码破译是最困难的，经不起这种攻击的密码体制被认为是完全不安全的（类似网络通信中仅仅进行搭线窃听）<br><img src="/./images/8/8-2.png"></p>
+</blockquote>
+</li>
+<li><p><strong>已知明文攻击（Known plaintext），破译者已知：加密算法、一定数量的明文和对应的密文</strong></p>
+<blockquote>
+<p>密码分析者不仅掌握了相当数量的密文，还有一些已知的明-密文对可供利用。密码分析者的任务是用密文信息推导出解密密钥或导出一个替代算法，此算法可以对所获得的密文恢复出相应的明文。在现实中，密码分析者可能通过各种手段得到更多的信息，即得到若干个明-密文对并不是十分困难的事，而且明文消息往往采用某种特定的格式，如电子现金传送消息总有一个标准的报头或标题等等。对于现代密码体制的基本要求：不仅要经受得住唯密文攻击，而且还要经受得住已知明文攻击<br><img src="/./images/8/8-3.png"></p>
+</blockquote>
+</li>
+<li><p><strong>选择明文攻击（Chosen plaintext）<font color=red>CPA</font>，破译者已知：加密算法、选定的明文和对应的密文</strong></p>
+<blockquote>
+<p>密码分析者不仅能够获得一定数量的明-密文对，还可以选择任何明文并在使用同一未知密钥的情况下能得到相应的密文。如果攻击者在加密系统中能选择特定的明文消息，则通过该明文消息对应的密文就有可能确定密钥的结构或获取更多关于密钥的信息。选择明文攻击比已知明文攻击更有效，这种情况往往是密码分析者通过某种手段暂时控制加密机<br><img src="/./images/8/8-4.png"></p>
+</blockquote>
+</li>
+<li><p><strong>选择密文攻击（Chosen ciphertext）<font color=red>CCA</font>，破译者已知：加密算法、选定的密文和对应的明文</strong></p>
+<blockquote>
+<p>密码分析者能选择不同被加密的密文，并还可得到对应的明文，密码分析者的任务是推出密钥及其它密文对应的明文。如果攻击者能从密文中选择特定的密文消息，则通过该密文消息对应的明文有可能推导出密钥的结构或产生更多关于密钥的信息。这种情况往往是密码分析者通过某种手段暂时控制解密机。(暂时控制解密机)<br><img src="/./images/8/8-5.png"></p>
+</blockquote>
+</li>
+<li><p><strong>选择文本攻击（Chosen text），破译者已知：加密算法、选定的明文和对应的密文、选定的密文和对应的明文</strong></p>
+<blockquote>
+<p>它是选择明文攻击和选择密文攻击的组合，即密码分析者在掌握密码算法的前提下，不仅能够选择明文并得到对应的密文，而且还能选择密文得到对应的明文。这种情况往往是密码分析者通过某种手段暂时控制加密机和解密机。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="攻击密码体制的常用方法"><a href="#攻击密码体制的常用方法" class="headerlink" title="攻击密码体制的常用方法"></a>攻击密码体制的常用方法</h4><ul>
+<li><p>穷举攻击<br>密码分析者尝试所有的密钥来破译密码。穷举攻击所花费的时间等于尝试次数乘以一次解密所需时间。因此，可以通过增大密钥量或增加解密算法的复杂性来对抗穷举攻击。不过抵御穷尽攻击最好的方法是增大密钥空间，因为增加解密算法的复杂性，也增加了合法用户使用密码系统的计算量</p>
+</li>
+<li><p>统计分析攻击<br>密码分析者通过分析密文和明文的统计规律来破译密码。统计分析攻击在历史上为破译做出过极大的贡献,大多数传统密码都可以通过统计分析的方法来破译。对抗统计分析攻击的方法是设法使明文的统计特征尽可能地不带入密文。如果密文不带有明文的痕迹，那么统计分析攻击成为不可能。</p>
+</li>
+<li><p>数学分析攻击<br>密码分析者针对加密变换所依赖的数学难题(如大整数的素因子分解、离散对数等)，通过数学求解的方法(如二次筛法、积分指数法等)来设法找到相应的解密变化，从而实现破译。对抗这种攻击，应该选用具有坚实的数学基础和足够复杂的加密方法。</p>
+</li>
+</ul>
+<h4 id="评价密码系统安全性的方法"><a href="#评价密码系统安全性的方法" class="headerlink" title="评价密码系统安全性的方法"></a>评价密码系统安全性的方法</h4><ul>
+<li><p>无条件安全性<br>不论提供的密文有多少，密文中所包含的信息都不足以惟一地确定其对应的明文;<br>具有无限计算资源(诸如时间、空间、资金和设备等)的密码分析者也无法破译某个密码系统。</p>
+</li>
+<li><p>计算安全性<br>涉及到攻破密码体制所做计算的工作量。计算出或估计出破译密码系统的计算量下限，利用已有的最好方法破译该密码系统所需要的努力超出了破译者的破译能力（诸如时间、空间、资金等资源)。</p>
+</li>
+<li><p>可证明安全性<br>通过有效的转化，将对密码体制的任何有效攻击归约到解一类已知困难问题，即使用多项式归约技术形式化证明一种密码体制的安全性，称为可证明安全性。<br>譬如，如果给定大整数的素因子分解是不可行的，那么RSA密码体制是不可破解的。<br>注:这种方法只是说明了安全性和另一个问题相关的，并没有完全证明它是安全的。</p>
+</li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">zerollone</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://zerollone.top/b0cb.html">http://zerollone.top/b0cb.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">zerollone</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/">
+                                    <span class="chip bg-color">密码学</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
+    $(function () {
+        $('.tabs').tabs();
+    });
 </script>
 
-
+            
+        </div>
     </div>
-</div>
-
-<main class="content">
 
     
 
-<div id="category-cloud" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
-            </div>
-            <div class="tag-chips">
-                
-                
-                
-                <a href="/categories/git/" title="git: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">git
-                        <span class="tag-length">1</span>
-                    </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/9cfa.html">
+                    <div class="card-image">
+                        
+                        <img src="https://x0.ifengimg.com/res/2020/47DC641E40B34CEF2A209A9B595031C97F0EE1C5_size311_w1920_h1200.jpeg" class="responsive-img" alt="Java 实用类">
+                        
+                        <span class="card-title">Java 实用类</span>
+                    </div>
                 </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-28
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Java%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    Java基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
                 
-                
-                <a href="/categories/java/" title="java: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">java
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Java%E5%9F%BA%E7%A1%80/" title="Java基础: 6">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">Java基础
-                        <span class="tag-length">6</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Mybatis/" title="Mybatis: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #E8F8F5;">Mybatis
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/solidity/" title="solidity: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #FEF9E7;">solidity
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/SpringBoot/" title="SpringBoot: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8F9F9;">SpringBoot
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/Spring/" title="Spring: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #82E0AA;">Spring
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" title="区块链: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D7BDE2;">区块链
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E4%BB%A5%E5%A4%AA%E5%9D%8A/" title="以太坊: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #A3E4D7;">以太坊
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" title="密码学: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #85C1E9;">密码学
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/MySQL/" title="MySQL: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8C471;">MySQL
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/SpringMVC/" title="SpringMVC: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9E79F;">SpringMVC
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/docker/" title="docker: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F8F9F9;">docker
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" title="数据结构与算法: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #FFF;">数据结构与算法
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+                        <span class="chip bg-color">Java基础语法</span>
+                    </a>
+                    
+                    <a href="/tags/Java%E5%AE%9E%E7%94%A8%E7%B1%BB/">
+                        <span class="chip bg-color">Java实用类</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
-    </div>
-</div>
-
-
-    
-
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/b0cb.html">
-                        <div class="card-image tag-image">
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2292.html">
+                    <div class="card-image">
+                        
+                        <img src="https://img0.baidu.com/it/u=4023395162,976898929&fm=253&fmt=auto&app=138&f=JPEG?w=499&h=283" class="responsive-img" alt="centos安装部署IPFS">
+                        
+                        <span class="card-title">centos安装部署IPFS</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
                             
-                            <img src="https://img2.baidu.com/it/u=3897534045,2640271880&fm=253&fmt=auto&app=138&f=JPEG?w=761&h=500" class="responsive-img" alt="密码学基础">
-                            
-                            <span class="card-title">密码学基础</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                密码学基本概念密码学（Cryptology）是结合数学、计算机科学、电子与通信等学科于一体的交叉学科，研究信息系统安全的科学。起源于保密通信技术。具体来讲，研究信息系统安全保密和认证的一门科学。
-密码编码学，通过变换消息（对信息编码）使其保
-                            
-                        </div>
-                        <div class="publish-info">
+                        
+                    </div>
+                    <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2023-04-28
                             </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="post-category">
-                                    密码学
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/" class="post-category">
+                                    区块链
                                 </a>
-                                
-                                
-                            </span>
-                        </div>
+                            
+                            
+                        </span>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/">
-                            <span class="chip bg-color">密码学</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/5163.html">
-                        <div class="card-image tag-image">
-                            
-                            <img src="https://www.kokojia.com/Public/images/upload/article/2017-03/58c1148cbd114.jpg" class="responsive-img" alt="密码学概述">
-                            
-                            <span class="card-title">密码学概述</span>
-                        </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/IPFS/">
+                        <span class="chip bg-color">IPFS</span>
                     </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                密码学发展史密码学具有悠久的历史，起源于公元前的战争；在二战后期，计算机推动了经典密码学走向成熟。70年代中期，DES的出现带来了密码科学体系，推动了现代密码学的发展。
-阿拉伯人是第一个清晰地理解密码学原理的人，设计并使用代替和换位加密，发
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-26
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="post-category">
-                                    密码学
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6%E7%AE%80%E4%BB%8B/">
-                            <span class="chip bg-color">密码学简介</span>
-                        </a>
-                        
-                    </div>
                     
                 </div>
+                
             </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/24e8.html">
-                        <div class="card-image tag-image">
-                            
-                            <img src="https://pic4.zhimg.com/v2-968849606a25f22fc107312baccbc3af_1440w.jpg?source=172ae18b" class="responsive-img" alt="同态加密算法">
-                            
-                            <span class="card-title">同态加密算法</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                加法同态 - Paillier算法&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Pailier算法是法国密码学家Paillier于1999年欧密会上发表，该算法基于复
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="post-category">
-                                    密码学
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%90%8C%E6%80%81%E5%8A%A0%E5%AF%86/">
-                            <span class="chip bg-color">同态加密</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/9719.html">
-                        <div class="card-image tag-image">
-                            
-                            <img src="https://pic4.zhimg.com/v2-968849606a25f22fc107312baccbc3af_1440w.jpg?source=172ae18b" class="responsive-img" alt="密码学中的几种攻击模式">
-                            
-                            <span class="card-title">密码学中的几种攻击模式</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                唯密文攻击
-
-密码分析者除了拥有截获的密文外（密码算法是公开的），没有其它可以利用的消息。密码分析者的任务是恢复尽可能多的明文，或者最好能推算出解密密钥，这样就很容易解出被加密的信息。这种攻击的方法至少可采用穷举搜索法，即对截获的密文依次用
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-14
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="post-category">
-                                    密码学
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/">
-                            <span class="chip bg-color">密码学</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/20a9.html">
-                        <div class="card-image tag-image">
-                            
-                            <img src="https://pic4.zhimg.com/v2-968849606a25f22fc107312baccbc3af_1440w.jpg?source=172ae18b" class="responsive-img" alt="同态加密概述">
-                            
-                            <span class="card-title">同态加密概述</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                基本概念同态加密（Homomorphic Encryption,HE）指将原始数据经过同态加密后，对密文进行特定的运算，得到的密文计算结果在进行同态解密后的得到的明文等价于原始明文数据直接进行相同计算所得到的数据结果。
-历史与发展
-
-197
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-13
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%AF%86%E7%A0%81%E5%AD%A6/" class="post-category">
-                                    密码学
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E5%90%8C%E6%80%81%E5%8A%A0%E5%AF%86/">
-                            <span class="chip bg-color">同态加密</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
-    </article>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
 
 
