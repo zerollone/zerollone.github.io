@@ -653,7 +653,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-28
+                    2023-06-07
                 </div>
                 
 
@@ -695,7 +695,7 @@
 <li>解密算法：将密文恢复为明文的变换函数，相应的变换过程称为解密</li>
 </ul>
 </blockquote>
-<p><img src="/./images/8/8-1.png"></p>
+<p><img src="http://img.zerollone.top/cryptography/8/8-1.png"></p>
 <h4 id="密码系统形式化的定义"><a href="#密码系统形式化的定义" class="headerlink" title="密码系统形式化的定义"></a>密码系统形式化的定义</h4><blockquote>
 <p><strong>The syntax of encryption.</strong> A private-key encryption scheme，or cipher，is comprised of three algorithms: the first is a procedure for generating keys, the second a procedurefor encrypting, and the third a procedure for decrypting. These algorithms have the following functionality:<br>1、The <em>key-generation algorithm</em> <strong>Gen</strong> is a probabilistic algorithm that out-puts a key $k$ chosen according to some distribution that is determinedby the scheme.</p>
 <p>2、The <em>encraption algorithm</em> <strong>Enc</strong> takes as input a key $k$ and a plaintext $m$ and outputs a ciphertext $c$. We denote the encryption of the plaintextm using the key $k$ by $Enc_k(m)$.</p>
@@ -721,22 +721,22 @@
 <ul>
 <li><p><strong>唯密文攻击（Ciphertext only），破译者已知：加密算法、待破译的密文</strong></p>
 <blockquote>
-<p>密码分析者除了拥有截获的密文外（密码算法是公开的），没有其它可以利用的消息。密码分析者的任务是恢复尽可能多的明文，或者最好能推算出解密密钥，这样就很容易解出被加密的信息。这种攻击的方法至少可采用穷举搜索法，即对截获的密文依次用所有的密钥尝试，直到得到有意义的明文。只要有足够多的计算资源和存储资源，理论上穷举搜索是可以成功的，但实际上，任何一种能保障安全要求的算法复杂度都是实际攻击者无法承受的。在这种情况下进行密码破译是最困难的，经不起这种攻击的密码体制被认为是完全不安全的（类似网络通信中仅仅进行搭线窃听）<br><img src="/./images/8/8-2.png"></p>
+<p>密码分析者除了拥有截获的密文外（密码算法是公开的），没有其它可以利用的消息。密码分析者的任务是恢复尽可能多的明文，或者最好能推算出解密密钥，这样就很容易解出被加密的信息。这种攻击的方法至少可采用穷举搜索法，即对截获的密文依次用所有的密钥尝试，直到得到有意义的明文。只要有足够多的计算资源和存储资源，理论上穷举搜索是可以成功的，但实际上，任何一种能保障安全要求的算法复杂度都是实际攻击者无法承受的。在这种情况下进行密码破译是最困难的，经不起这种攻击的密码体制被认为是完全不安全的（类似网络通信中仅仅进行搭线窃听）<br><img src="http://img.zerollone.top/cryptography/8/8-2.png"></p>
 </blockquote>
 </li>
 <li><p><strong>已知明文攻击（Known plaintext），破译者已知：加密算法、一定数量的明文和对应的密文</strong></p>
 <blockquote>
-<p>密码分析者不仅掌握了相当数量的密文，还有一些已知的明-密文对可供利用。密码分析者的任务是用密文信息推导出解密密钥或导出一个替代算法，此算法可以对所获得的密文恢复出相应的明文。在现实中，密码分析者可能通过各种手段得到更多的信息，即得到若干个明-密文对并不是十分困难的事，而且明文消息往往采用某种特定的格式，如电子现金传送消息总有一个标准的报头或标题等等。对于现代密码体制的基本要求：不仅要经受得住唯密文攻击，而且还要经受得住已知明文攻击<br><img src="/./images/8/8-3.png"></p>
+<p>密码分析者不仅掌握了相当数量的密文，还有一些已知的明-密文对可供利用。密码分析者的任务是用密文信息推导出解密密钥或导出一个替代算法，此算法可以对所获得的密文恢复出相应的明文。在现实中，密码分析者可能通过各种手段得到更多的信息，即得到若干个明-密文对并不是十分困难的事，而且明文消息往往采用某种特定的格式，如电子现金传送消息总有一个标准的报头或标题等等。对于现代密码体制的基本要求：不仅要经受得住唯密文攻击，而且还要经受得住已知明文攻击<br><img src="http://img.zerollone.top/cryptography/8/8-3.png"></p>
 </blockquote>
 </li>
 <li><p><strong>选择明文攻击（Chosen plaintext）<font color=red>CPA</font>，破译者已知：加密算法、选定的明文和对应的密文</strong></p>
 <blockquote>
-<p>密码分析者不仅能够获得一定数量的明-密文对，还可以选择任何明文并在使用同一未知密钥的情况下能得到相应的密文。如果攻击者在加密系统中能选择特定的明文消息，则通过该明文消息对应的密文就有可能确定密钥的结构或获取更多关于密钥的信息。选择明文攻击比已知明文攻击更有效，这种情况往往是密码分析者通过某种手段暂时控制加密机<br><img src="/./images/8/8-4.png"></p>
+<p>密码分析者不仅能够获得一定数量的明-密文对，还可以选择任何明文并在使用同一未知密钥的情况下能得到相应的密文。如果攻击者在加密系统中能选择特定的明文消息，则通过该明文消息对应的密文就有可能确定密钥的结构或获取更多关于密钥的信息。选择明文攻击比已知明文攻击更有效，这种情况往往是密码分析者通过某种手段暂时控制加密机<br><img src="http://img.zerollone.top/cryptography/8/8-4.png"></p>
 </blockquote>
 </li>
 <li><p><strong>选择密文攻击（Chosen ciphertext）<font color=red>CCA</font>，破译者已知：加密算法、选定的密文和对应的明文</strong></p>
 <blockquote>
-<p>密码分析者能选择不同被加密的密文，并还可得到对应的明文，密码分析者的任务是推出密钥及其它密文对应的明文。如果攻击者能从密文中选择特定的密文消息，则通过该密文消息对应的明文有可能推导出密钥的结构或产生更多关于密钥的信息。这种情况往往是密码分析者通过某种手段暂时控制解密机。(暂时控制解密机)<br><img src="/./images/8/8-5.png"></p>
+<p>密码分析者能选择不同被加密的密文，并还可得到对应的明文，密码分析者的任务是推出密钥及其它密文对应的明文。如果攻击者能从密文中选择特定的密文消息，则通过该密文消息对应的明文有可能推导出密钥的结构或产生更多关于密钥的信息。这种情况往往是密码分析者通过某种手段暂时控制解密机。(暂时控制解密机)<br><img src="http://img.zerollone.top/cryptography/8/8-5.png"></p>
 </blockquote>
 </li>
 <li><p><strong>选择文本攻击（Chosen text），破译者已知：加密算法、选定的明文和对应的密文、选定的密文和对应的明文</strong></p>

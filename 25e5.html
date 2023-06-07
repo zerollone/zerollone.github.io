@@ -660,7 +660,7 @@ eth.a">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-26
+                    2023-06-07
                 </div>
                 
 
@@ -691,11 +691,11 @@ eth.a">
             <div id="articleContent">
                 <h2 id="以太坊控制台命令行操作"><a href="#以太坊控制台命令行操作" class="headerlink" title="以太坊控制台命令行操作"></a>以太坊控制台命令行操作</h2><h4 id="创建账户"><a href="#创建账户" class="headerlink" title="创建账户"></a>创建账户</h4><pre class="line-numbers language-java"><code class="language-java">personal<span class="token punctuation">.</span><span class="token function">newAccount</span><span class="token punctuation">(</span><span class="token string">"123456"</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>输入的参数是该账户对应的密码，账户地址保存在主目录下的keystore目录中<br><img src="/./images/2/2-1.png"></p>
+<p>输入的参数是该账户对应的密码，账户地址保存在主目录下的keystore目录中<br><img src="http://img.zerollone.top/ethereum/2/2-1.png"></p>
 <h4 id="查询系统中的账户"><a href="#查询系统中的账户" class="headerlink" title="查询系统中的账户"></a>查询系统中的账户</h4><pre class="line-numbers language-java"><code class="language-java">personal<span class="token punctuation">.</span>listAccounts
 eth<span class="token punctuation">.</span>accounts
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>这个两个命令都可列出系统中的账户地址<br><img src="/./images/2/2-2.png"></p>
+<p>这个两个命令都可列出系统中的账户地址<br><img src="http://img.zerollone.top/ethereum/2/2-2.png"></p>
 <h4 id="查询账户余额，单位是wei，1eth-x3D-10-18-wei"><a href="#查询账户余额，单位是wei，1eth-x3D-10-18-wei" class="headerlink" title="查询账户余额，单位是wei，1eth &#x3D; $10^{18}$wei"></a>查询账户余额，单位是wei，1eth &#x3D; $10^{18}$wei</h4><pre class="line-numbers language-java"><code class="language-java">eth<span class="token punctuation">.</span><span class="token function">getBalance</span><span class="token punctuation">(</span>eth<span class="token punctuation">.</span>accounts<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 eth<span class="token punctuation">.</span><span class="token function">getBalance</span><span class="token punctuation">(</span>eth<span class="token punctuation">.</span>accounts<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 eth<span class="token punctuation">.</span><span class="token function">getBalance</span><span class="token punctuation">(</span><span class="token string">"0xf116d212c0e1fb2bd31ae9ad28659bbf0c8d3e7c"</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 需要查询的账户地址</span>
@@ -706,17 +706,17 @@ web3<span class="token punctuation">.</span><span class="token function">fromWei
 <span class="token comment" spellcheck="true">// 将eth换算成wei</span>
 web3<span class="token punctuation">.</span><span class="token function">toWei</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="/./images/2/2-3.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/2/2-3.png"></p>
 <h4 id="账户交易"><a href="#账户交易" class="headerlink" title="账户交易"></a>账户交易</h4><p>在进行账户交易前，需要将发起交易的账户进行解锁</p>
 <pre class="line-numbers language-java"><code class="language-java">personal<span class="token punctuation">.</span><span class="token function">unlockAccount</span><span class="token punctuation">(</span>eth<span class="token punctuation">.</span>accounts<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"123456"</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 前面也可改为账户地址，后面的是账户的密码</span>
 eth<span class="token punctuation">.</span><span class="token function">sendTransaction</span><span class="token punctuation">(</span><span class="token punctuation">{</span>from<span class="token operator">:</span>eth<span class="token punctuation">.</span>accounts<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>to<span class="token operator">:</span>eth<span class="token punctuation">.</span>accounts<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>value<span class="token operator">:</span>web3<span class="token punctuation">.</span><span class="token function">toWei</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">"ether"</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><img src="/./images/2/2-4.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/2/2-4.png"></p>
 <p>账户交易后，未启用挖矿，交易不会写入区块链中，存放在本地交易池里面</p>
 <pre class="line-numbers language-java"><code class="language-java">txpool<span class="token punctuation">.</span>status   <span class="token comment" spellcheck="true">// 查看本地交易池</span>
 eth<span class="token punctuation">.</span><span class="token function">getBlock</span><span class="token punctuation">(</span><span class="token string">"pending"</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">.</span>transactions <span class="token comment" spellcheck="true">//查看当前待确认交易的详细信息 </span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><img src="/./images/2/2-5.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/2/2-5.png"></p>
 <h4 id="启动挖矿与暂停"><a href="#启动挖矿与暂停" class="headerlink" title="启动挖矿与暂停"></a>启动挖矿与暂停</h4><p>挖矿默认为系统中的第一个账户</p>
 <pre class="line-numbers language-java"><code class="language-java">eth<span class="token punctuation">.</span>coinbase    <span class="token comment" spellcheck="true">// 查看系统挖矿的账户</span>
 miner<span class="token punctuation">.</span><span class="token function">setEtherbase</span><span class="token punctuation">(</span>eth<span class="token punctuation">.</span>accounts<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 设置挖矿账户</span>
@@ -727,7 +727,7 @@ miner<span class="token punctuation">.</span><span class="token function">stop</
 <span class="token comment" spellcheck="true">// 成功挖矿一次后就结束</span>
 miner<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>admin<span class="token punctuation">.</span><span class="token function">sleepBlocks</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>miner<span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="/./images/2/2-6.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/2/2-6.png"></p>
 <h4 id="查看交易和区块"><a href="#查看交易和区块" class="headerlink" title="查看交易和区块"></a>查看交易和区块</h4><pre class="line-numbers language-java"><code class="language-java">eth<span class="token punctuation">.</span>blockNumber <span class="token comment" spellcheck="true">// 查看当前区块总数</span>
 
 <span class="token comment" spellcheck="true">// 通过交易hash查看交易详细信息</span>
@@ -736,12 +736,12 @@ eth<span class="token punctuation">.</span><span class="token function">getTrans
 <span class="token comment" spellcheck="true">// 通过区块号查看区块</span>
 eth<span class="token punctuation">.</span><span class="token function">getBlock</span><span class="token punctuation">(</span><span class="token number">70</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="/./images/2/2-7.png"><br><img src="/./images/2/2-8.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/2/2-7.png"><br><img src="http://img.zerollone.top/ethereum/2/2-8.png"></p>
 <h4 id="私链多个节点连接"><a href="#私链多个节点连接" class="headerlink" title="私链多个节点连接"></a>私链多个节点连接</h4><p>在多节点私链搭建中，各个节点的创世文件都相同，且需要记住文件中的chainID号，在启动每个节点时，启动命令都需要加入<code>--networkid &quot;chainID号&quot;</code><br>启动成功后，获取每个节点的节点信息</p>
 <pre class="line-numbers language-java"><code class="language-java">admin<span class="token punctuation">.</span>nodeInfo
 admin<span class="token punctuation">.</span>nodeInfo<span class="token punctuation">.</span>enode
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><img src="/./images/2/2-9.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/2/2-9.png"></p>
 <p>使用admin.addPeers()命令进行多个节点的连接</p>
 <pre class="line-numbers language-java"><code class="language-java">admin<span class="token punctuation">.</span><span class="token function">addPeer</span><span class="token punctuation">(</span><span class="token string">"enode://......@192.168.1.106:30301?discport=0"</span><span class="token punctuation">)</span>
 admin<span class="token punctuation">.</span>peers         <span class="token comment" spellcheck="true">// 查看连接到的节点</span>
@@ -749,7 +749,7 @@ net<span class="token punctuation">.</span>listening       <span class="token co
 net<span class="token punctuation">.</span>peerCount       <span class="token comment" spellcheck="true">// 查看节点连接数</span>
 net<span class="token punctuation">.</span>version         <span class="token comment" spellcheck="true">// 查看连接的私链id</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="/./images/2/2-10.png"><br><img src="/./images/2/2-11.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/2/2-10.png"><br><img src="http://img.zerollone.top/ethereum/2/2-11.png"></p>
 
                 
             </div>

@@ -629,12 +629,12 @@ centos 7 上搭建docker1、使用root用户登录cen">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">
-                                <span class="chip bg-color">区块链</span>
-                            </a>
-                        
                             <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A7%81%E9%93%BE%E6%90%AD%E5%BB%BA/">
                                 <span class="chip bg-color">以太坊私链搭建</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">
+                                <span class="chip bg-color">区块链</span>
                             </a>
                         
                     </div>
@@ -665,7 +665,7 @@ centos 7 上搭建docker1、使用root用户登录cen">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-26
+                    2023-06-07
                 </div>
                 
 
@@ -709,19 +709,19 @@ centos 7 上搭建docker1、使用root用户登录cen">
 <p><strong>2、安装docker所需的软件包</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">yum install -y yum-utils device-mapper-persistent-data lvm2
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="/./images/1/1-1.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/1/1-1.png"></p>
 <p><strong>3、设置yum软件源，这里选择阿里云</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="/./images/1/1-2.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/1/1-2.png"></p>
 <p><strong>4、查看仓库中docker的所有版本</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">yum list docker-ce --showduplicates | sort -r
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="/./images/1/1-3.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/1/1-3.png"></p>
 <p><strong>5、安装docker</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">yum -y install docker-ce
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="/./images/1/1-4.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/1/1-4.png"></p>
 <p><strong>6、启动docker</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">systemctl start docker
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -731,11 +731,11 @@ centos 7 上搭建docker1、使用root用户登录cen">
 <p><strong>8、查看docker是否安装成功</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">docker version
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="/./images/1/1-5.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/1/1-5.png"></p>
 <h3 id="安装以太坊"><a href="#安装以太坊" class="headerlink" title="安装以太坊"></a>安装以太坊</h3><p><strong>1、在docker中下载以太坊镜像</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">docker pull ethereum/client-go
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="/./images/1/1-6.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/1/1-6.png"></p>
 <p><strong>2、创建目录blockChain</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">mkdir blockChain
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -787,17 +787,17 @@ vim genesis.json
   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
 }
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="/./images/1/1-7.png"></p>
-<p><strong>6、运行.&#x2F;start-ethereum.sh，之后切换到&#x2F;root目录下</strong><br><img src="/./images/1/1-9.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/1/1-7.png"></p>
+<p><strong>6、运行.&#x2F;start-ethereum.sh，之后切换到&#x2F;root目录下</strong><br><img src="http://img.zerollone.top/ethereum/1/1-9.png"></p>
 <p><strong>7、初始化节点，写入创世区块，运行下面的命令</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">geth --datadir data0 init genesis.json
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="/./images/1/1-8.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/1/1-8.png"></p>
 <p><strong>8、启动节点</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">geth --identity "TestNode" --datadir data0 --http --http.port "8545" --http.addr "0.0.0.0" -port "30301" --networkid "123" --http.api "eth,net,web3,personal" --nodiscover console --allow-insecure-unlock
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><em>使用命令 -rpc报错时，是因为现在不用rpc，改用http，将原来rpc改为http即可，如rpcport -&gt; http.port</em></p>
-<p><img src="/./images/1/1-10.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/1/1-10.png"></p>
 <h1 id="centos-7-安装geth并搭建以太坊"><a href="#centos-7-安装geth并搭建以太坊" class="headerlink" title="centos 7 安装geth并搭建以太坊"></a>centos 7 安装geth并搭建以太坊</h1><p><strong>1、更新系统</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">yum -y update
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -817,7 +817,7 @@ source /etc/profile
 # 查看golang版本
 go version
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="/./images/1/1-11.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/1/1-11.png"></p>
 <p><strong>4、安装geth</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">wget https://gethstore.blob.core.windows.net/builds/geth-alltools-linux-amd64-1.9.10-58cf5686.tar.gz
 tar zxvf geth-alltools-linux-amd64-1.9.10-58cf5686.tar.gz
@@ -832,7 +832,7 @@ echo `export PATH=$HOME/geth-home:$PATH` >> /etc/profile
 # 查看geth版本信息
 geth version
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="/./images/1/1-12.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/1/1-12.png"></p>
 <p><strong>5、选择目录创建一个genesis.json文件</strong><br>该文件的内容与上面文件内容相同</p>
 <p><strong>6、初始化节点，写入创世区块，并在与genesis.json文件相同的目录下运行下面的命令</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">geth --datadir data0 init genesis.json
@@ -840,7 +840,7 @@ geth version
 <p><strong>7、启动节点</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">geth --identity "TestNode" --datadir data0 --rpc --rpcport "8545" --rpcaddr "0.0.0.0" -port "30301" --networkid "123" --rpcapi "eth,net,web3,personal" --nodiscover console --allow-insecure-unlock
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="/./images/1/1-13.png"></p>
+<p><img src="http://img.zerollone.top/ethereum/1/1-13.png"></p>
 
                 
             </div>
@@ -905,12 +905,12 @@ geth version
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">
-                                    <span class="chip bg-color">区块链</span>
-                                </a>
-                            
                                 <a href="/tags/%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A7%81%E9%93%BE%E6%90%AD%E5%BB%BA/">
                                     <span class="chip bg-color">以太坊私链搭建</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/">
+                                    <span class="chip bg-color">区块链</span>
                                 </a>
                             
                         </div>

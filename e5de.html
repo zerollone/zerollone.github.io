@@ -652,7 +652,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-24
+                    2023-06-07
                 </div>
                 
 
@@ -733,7 +733,7 @@
 <li>就绪状态：创建好的线程对象调用start()方法完成启动，进入线程池等待抢占CPU资源。</li>
 <li>运行状态：线程对象获取了CPU资源，在一定的时间内执行任务。</li>
 <li>阻塞状态：正在运行的线程暂停执行任务，释放所占用的CPU资源。并在解除阻塞之后也不能直接回到运行状态，而是重新回到就绪状态，等待获取CPU资源。</li>
-<li>终止状态：线程运行完毕或因为异常导致该线程终止运行。<br><img src="/./image/2.jpg"></li>
+<li>终止状态：线程运行完毕或因为异常导致该线程终止运行。<br><img src="http://img.zerollone.top/javasyntax/2.jpg"></li>
 </ul>
 <h2 id="线程调度"><a href="#线程调度" class="headerlink" title="线程调度"></a>线程调度</h2><h4 id="线程休眠"><a href="#线程休眠" class="headerlink" title="线程休眠"></a>线程休眠</h4><p>休眠指让当前线程暂停执行，从运行状态进入阻塞状态，将CPU资源让给其他线程的一种调度方式，要通过调用sleep()方法来实现。</p>
 <p>sleep(long millis)是Java.lang.Thread类中定义的方法，使用时需要指定当前线程休眠的时间，传入一个long类型的数据作为休眠时间，单位为毫秒。任何一个线程的实例化对象都可以调用该方法。</p>
