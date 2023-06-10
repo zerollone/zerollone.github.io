@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="同态加密算法, zerollone">
-    <meta name="description" content="加法同态 - Paillier算法&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;&amp;amp;nbsp;Pailier算法是法国密码学家Paillier于1999年欧密会上发表，该算法基于复">
+    <meta name="description" content="加法同态 - Paillier算法Pailier算法是法国密码学家Paillier于1999年欧密会上发表，该算法基于复合剩余类的困难问题，是一种满足加法的同态加密算法。数学知识1、Carmichael函数，当a与n互素时，$a^{λ(n)">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -652,21 +652,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-24
+                    2023-06-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    8 分
                 </div>
                 
 
@@ -681,7 +681,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="加法同态-Paillier算法"><a href="#加法同态-Paillier算法" class="headerlink" title="加法同态 - Paillier算法"></a>加法同态 - Paillier算法</h2><p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Pailier算法是法国密码学家Paillier于1999年欧密会上发表，该算法基于复合剩余类的困难问题，是一种满足加法的同态加密算法。<br><strong>数学知识</strong><br><strong>1、Carmichael函数</strong>，当a与n互素时，$a^{λ(n)}$ &#x3D; 1 mod n<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;卡迈克尔函数定义：当 n 为 1、2、4、奇素数的次幂、奇素数的次幂的两倍时为欧拉函数，当 n 为 2、4 以外的 2 的次幂时为欧拉函数的一半。<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;如果n可写为素数的积，即$n&#x3D;p_1^{a1}p_2^{a2}…p_n^{an}$,则λ(n)&#x3D;lcm($λ(p_1^{a1}),λ(p_2^{a2}),…,λ(p_n^{an})$)</p>
+                <h2 id="加法同态-Paillier算法"><a href="#加法同态-Paillier算法" class="headerlink" title="加法同态 - Paillier算法"></a>加法同态 - Paillier算法</h2><p>Pailier算法是法国密码学家Paillier于1999年欧密会上发表，该算法基于复合剩余类的困难问题，是一种满足加法的同态加密算法。<br><strong>数学知识</strong><br><strong>1、Carmichael函数</strong>，当a与n互素时，$a^{λ(n)}$ &#x3D; 1 mod n<br>卡迈克尔函数定义：当 n 为 1、2、4、奇素数的次幂、奇素数的次幂的两倍时为欧拉函数，当 n 为 2、4 以外的 2 的次幂时为欧拉函数的一半。<br>如果n可写为素数的积，即$n&#x3D;p_1^{a1}p_2^{a2}…p_n^{an}$,则λ(n)&#x3D;lcm($λ(p_1^{a1}),λ(p_2^{a2}),…,λ(p_n^{an})$)</p>
 <p><strong>2、泰勒展开式</strong>，y&#x3D;${(1+n)^x}&#x3D;∑^x_{k&#x3D;0}C^k_xn^k &#x3D; 1+nx+C^2_xn^2 + …  $；从$n^2$开始后面的项均可以被$n^2$整数，因此 y &#x3D; 1+nx mod $n^2$ ，根据同余定理并同除n，可得x &#x3D; $\frac{(y-1)}{n}$ mod n</p>
 <p><strong>3、欧拉函数</strong>：计算不大于n且与n互素得正整数得个数，用$\varphi$(n)表示这些正整数的集合并记为 $Z^*_n$</p>
 <p><strong>4、计算带幂次素数的欧拉函数</strong>：若p为素数，且有$n&#x3D;p^r$，则$\varphi$(n)&#x3D;$\varphi$($p^r$) &#x3D; $p^{r-1}\varphi(p-1)$</p>
@@ -693,29 +693,29 @@
 </blockquote>
 <p><strong>加密算法</strong><br>1、选择 r∈$Z^*_{n}$，因此 r∈$Z^*_{n^2}$<br>2、计算密文 C &#x3D; $g^mr^n$ mod ${n^2}$</p>
 <blockquote>
-<p>选择明文 m&#x3D;42，随机数 r&#x3D;23<br>C &#x3D; $5652^{42}23^{77}$mod 5929<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#x3D; 4624</p>
+<p>选择明文 m&#x3D;42，随机数 r&#x3D;23<br>C &#x3D; $5652^{42}23^{77}$mod 5929<br>&#x3D; 4624</p>
 </blockquote>
 <p><strong>解密算法</strong><br>1、令函数L(x)&#x3D;$\frac{x-1}{n}$<br>2、计算明文 m &#x3D; $\frac{L(c^λmod n^2)}{L(g^λmod n^2}$  mod n</p>
 <blockquote>
 <p>m &#x3D; $\frac{L(4624^{30}mod 5929)}{L(5652^{30}mod 5929)}$<br>m &#x3D; $\frac{L(4852)}{L(3928)}$ mod 77<br>m &#x3D; $\frac{63}{51}$ mod 77<br>m &#x3D; 63*$51^{-1}$ mod 77<br>m &#x3D; 63*74 mod 77<br>m &#x3D; 42</p>
 <p>求逆元的正确性<br>m &#x3D; $\frac{a}{b}$ mod n<br>mb &#x3D; a mod n<br>mb$b^{-1}$ &#x3D; a$b^{-1}$ mod n<br>因为b$b^{-1}$ mod n &#x3D; 1<br>m &#x3D; a$b^{-1}$ mod n</p>
 </blockquote>
-<p><strong>加解密正确性证明</strong><br>$c^λmod n^2 &#x3D; g^{mλ}r^{nλ} mod n^2 &#x3D; g^{mλ} modn^2 &#x3D; (1+n)^{mλ} mod n^2$<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#x3D;(1 + nmλ) mod $n^2$ （由泰勒展开式得）</p>
+<p><strong>加解密正确性证明</strong><br>$c^λmod n^2 &#x3D; g^{mλ}r^{nλ} mod n^2 &#x3D; g^{mλ} modn^2 &#x3D; (1+n)^{mλ} mod n^2$<br>&#x3D;(1 + nmλ) mod $n^2$ （由泰勒展开式得）</p>
 <blockquote>
-<p>证明$r^{nλ} mod n^2$ &#x3D; 1<br>由卡迈克尔函数得<br>$λ(n^2)$ &#x3D; $lcm(λ(p^2),λ(q^2))$<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#x3D; $lcm(p(p-1),q(q-1))$<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#x3D; $n*λ(n)$<br>由卡迈克尔函数可知，p,q都是素数<br>$a^{λ(n)} &#x3D;1mod n$<br>$a^{nλ(n)} &#x3D;1mod n^2$</p>
+<p>证明$r^{nλ} mod n^2$ &#x3D; 1<br>由卡迈克尔函数得<br>$λ(n^2)$ &#x3D; $lcm(λ(p^2),λ(q^2))$<br>&#x3D; $lcm(p(p-1),q(q-1))$<br>&#x3D; $n*λ(n)$<br>由卡迈克尔函数可知，p,q都是素数<br>$a^{λ(n)} &#x3D;1mod n$<br>$a^{nλ(n)} &#x3D;1mod n^2$</p>
 </blockquote>
 <p>同理可得：$g^λ mod n^2 &#x3D; (1 + nλ) mod n^2$<br>$L(c^λmod n^2)$ &#x3D; $\frac{(1 + nmλ - 1 )mod n^2}{n} &#x3D; mλ mod n^2$<br>$L(g^λmod n^2)$ &#x3D; $\frac{(1 + nλ - 1 )mod n^2}{n} &#x3D; λ mod n^2$<br>故明文 m &#x3D; $\frac{L(c^λmod n^2)}{L(g^λmod n^2)}$ &#x3D; $\frac{mλ}{λ}$ &#x3D; m</p>
 <p><strong>加法同态</strong><br>E(a) * E(b)<br>&#x3D; $(g^ar_1^n mod n^2) * (g^br_2^n mod n^2)$<br>&#x3D; $g^{a+b}(r_1 * r_2)^n mod n^2$<br>&#x3D; E(a +b)<br>因此，Piallier算法支持加法同态，即密文相乘等于明文相加</p>
-<h1 id="乘法同态-RSA算法"><a href="#乘法同态-RSA算法" class="headerlink" title="乘法同态 - RSA算法"></a>乘法同态 - RSA算法</h1><p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;RSA是1977年由罗纳德·李维斯特（Ron Rivest）、阿迪·萨莫尔（Adi Shamir）和伦纳德·阿德曼（Leonard Adleman）一起提出的。RSA的安全性依赖于大数分解，为提高保密强度，RSA密钥至少为500位长，一般推荐使用1024位。RSA算法的保密强度随其密钥的长度增加而增强。但是，密钥越长，其加解密所耗用的时间也越长</p>
-<p><strong>密钥生成</strong><br>1、选择两个大素数 p，q<br>2、计算 n &#x3D; p * q，<br>3、计算欧拉函数$\varphi(n)$<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;$\varphi(n)$ &#x3D; (p - 1)(q - 1)<br>4、计算公钥 e<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;e 满足的条件：① 1 &lt; e &lt; $\varphi(n)$；② e 与 $\varphi(n)$互素<br>5、计算私钥 d<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;e * d &#x3D; 1 mod($\varphi(n)$)</p>
-<p><strong>加密算法</strong><br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;设明文为 A且小于n，密文为 B<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<strong>B &#x3D; $A^e$ mod n</strong></p>
-<p><strong>解密算法</strong><br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<strong>A &#x3D; $B^d$ mod n</strong></p>
-<p><strong>乘法同态</strong><br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;假设密文为 $B_1$，$B_2$<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;$B_1$*$B_2$ &#x3D; $A_1^{e1}<em>A_2^{e2}$ mod n<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#x3D; $(A_1</em>A_2)^e$ mod n<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;因此，RSA算法满足乘法同态性，密文乘法等于明文乘法</p>
-<p><strong>加解密正确性证明</strong><br>由解密可得，须证明 $A^{ed}$ &#x3D; A mod n<br>ed &#x3D; 1 mod$\varphi(n)$<br>ed -1 &#x3D; k$\varphi(n)$，ed &#x3D; k$\varphi(n)$ + 1<br>即得 $A^{k\varphi(n)+1}$ &#x3D; A mod n，并对 A 分两种情况讨论<br><strong>①</strong> <strong>当 A 与 n 互素时</strong><br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;由欧拉定理可得：$A^{\varphi(n)}$ &#x3D; 1 mod n<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;$A^{ed}$ mod n &#x3D; $A^{k\varphi(n)+1}$ mod n &#x3D; $A<em>A^{k\varphi(n)}$ mod n &#x3D; A mod n<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;由于 A &lt; n，因此加解密正确<br><strong>②</strong> <strong>A 与 n 不互素</strong><br>条件有：A与n不互素，n&#x3D;pq，p，q均为素数，且 A &lt; n<br>因此 A&#x3D;kp 或 kq；举例说明，p&#x3D;3,q&#x3D;5,n&#x3D;15，由于A与n不互素，因此A&#x3D;{3,5,6,9,10,12}，任取A必为q或p的倍数<br>令A&#x3D;kp，则 1 &lt; k &lt; q<br>因为 k &lt; q，且 q是素数，因此 k 与 q 互素<br>k与q互素，p与q互素，则kq不能被q整除<br>所有由费马小定理得：$(kp)^{q-1}$ &#x3D; 1 mod q<br>由同余乘法性质得：$(kp)^{(q-1)</em>(p-1)*k}*kp &#x3D; (kp) mod q$，对于mod q，1的k(p-1)次方依然为1<br>$\varphi(n)$ &#x3D; (p-1)(q-1)，ed &#x3D; k$\varphi(n)$ + 1<br>所以$(kp)^{ed} &#x3D; (kp) mod q$<br>$(kp)^{ed} - (kp) &#x3D; tq$<br>$kp((kp)^{ed-1} - 1) &#x3D; tq$<br>所以kp能整除tq，而q是素数，因此 t 是 p的倍数<br>则令 t &#x3D; $t_1p$<br>而$(kp)^{ed} &#x3D; tq + kp$<br>即$(kp)^{ed} &#x3D; t_1pq + kp$<br>即$A^{ed} &#x3D; t_1n + A$<br>所以原式$A^{ed}$ mod n &#x3D; $t_1n+A$ mod n &#x3D; $A$<br>因此，加解密正确</p>
+<h1 id="乘法同态-RSA算法"><a href="#乘法同态-RSA算法" class="headerlink" title="乘法同态 - RSA算法"></a>乘法同态 - RSA算法</h1><p>RSA是1977年由罗纳德·李维斯特（Ron Rivest）、阿迪·萨莫尔（Adi Shamir）和伦纳德·阿德曼（Leonard Adleman）一起提出的。RSA的安全性依赖于大数分解，为提高保密强度，RSA密钥至少为500位长，一般推荐使用1024位。RSA算法的保密强度随其密钥的长度增加而增强。但是，密钥越长，其加解密所耗用的时间也越长</p>
+<p><strong>密钥生成</strong><br>1、选择两个大素数 p，q<br>2、计算 n &#x3D; p * q，<br>3、计算欧拉函数$\varphi(n)$<br>$\varphi(n)$ &#x3D; (p - 1)(q - 1)<br>4、计算公钥 e<br>e 满足的条件：① 1 &lt; e &lt; $\varphi(n)$；② e 与 $\varphi(n)$互素<br>5、计算私钥 d<br>e * d &#x3D; 1 mod($\varphi(n)$)</p>
+<p><strong>加密算法</strong><br>设明文为 A且小于n，密文为 B<br><strong>B &#x3D; $A^e$ mod n</strong></p>
+<p><strong>解密算法</strong><br><strong>A &#x3D; $B^d$ mod n</strong></p>
+<p><strong>乘法同态</strong><br>假设密文为 $B_1$，$B_2$<br>$B_1$*$B_2$ &#x3D; $A_1^{e1}$ * $A_2^{e2}$  mod n<br>&#x3D; $(A_1$ * $A_2)^e$ mod n<br>因此，RSA算法满足乘法同态性，密文乘法等于明文乘法</p>
+<p><strong>加解密正确性证明</strong><br>由解密可得，须证明 $A^{ed}$ &#x3D; A mod n<br>ed &#x3D; 1 mod$\varphi(n)$<br>ed -1 &#x3D; k$\varphi(n)$，ed &#x3D; k$\varphi(n)$ + 1<br>即得 $A^{k\varphi(n)+1}$ &#x3D; A mod n，并对 A 分两种情况讨论<br><strong>①</strong> <strong>当 A 与 n 互素时</strong><br>由欧拉定理可得：$A^{\varphi(n)}$ &#x3D; 1 mod n<br>$A^{ed}$ mod n &#x3D; $A^{k\varphi(n)+1}$ mod n &#x3D; $A$ * $A^{k\varphi(n)}$ mod n &#x3D; A mod n<br>由于 A &lt; n，因此加解密正确<br><strong>②</strong> <strong>A 与 n 不互素</strong><br>条件有：A与n不互素，n&#x3D;pq，p，q均为素数，且 A &lt; n<br>因此 A&#x3D;kp 或 kq；举例说明，p&#x3D;3,q&#x3D;5,n&#x3D;15，由于A与n不互素，因此A&#x3D;{3,5,6,9,10,12}，任取A必为q或p的倍数<br>令A&#x3D;kp，则 1 &lt; k &lt; q<br>因为 k &lt; q，且 q是素数，因此 k 与 q 互素<br>k与q互素，p与q互素，则kq不能被q整除<br>所有由费马小定理得：$(kp)^{q-1}$ &#x3D; 1 mod q<br>由同余乘法性质得：$(kp)^{(q-1)*(p-1)*k}*kp &#x3D; (kp) mod q$，对于mod q，1的k(p-1)次方依然为1<br>$\varphi(n)$ &#x3D; (p-1)(q-1)，ed &#x3D; k $\varphi(n)$ + 1<br>所以$(kp)^{ed} &#x3D; (kp) mod q$<br>$(kp)^{ed} - (kp) &#x3D; tq$<br>$kp((kp)^{ed-1} - 1) &#x3D; tq$<br>所以kp能整除tq，而q是素数，因此 t 是 p的倍数<br>则令 t &#x3D; $t_1p$<br>而$(kp)^{ed} &#x3D; tq + kp$<br>即$(kp)^{ed} &#x3D; t_1pq + kp$<br>即$A^{ed} &#x3D; t_1n + A$<br>所以原式$A^{ed}$ mod n &#x3D; $t_1n+A$ mod n &#x3D; $A$<br>因此，加解密正确</p>
 <h2 id="乘法同态-ElGamal算法"><a href="#乘法同态-ElGamal算法" class="headerlink" title="乘法同态 - ElGamal算法"></a>乘法同态 - ElGamal算法</h2><p><strong>密钥生成</strong><br>1、随机选择大素数p，且要求 p-1 有大素数因子；在选择一个模 p 的本原元 $\alpha$<br>2、从{1，2，3，…，p-1}中随机选择一个数 d<br>3、计算 $\beta &#x3D; \alpha^d mod p$<br>4、公钥为(p,$\beta,\alpha$)，私钥为 d</p>
 <p><strong>加密算法</strong><br>1、从{1，2，3，…，p-1}中选择一个随机数 k，令 m 为明文<br>2、计算密文 $C_1&#x3D;\alpha^k mod p$<br>3、计算密文 $C_2&#x3D;m*\beta^k mod p$<br>4、传输密文（$C_1,C_2$）</p>
 <p><strong>解密算法</strong><br>1、计算明文$m &#x3D; C_2(C_1^d)^{-1} mod p$<br>2、$(C_1^d)^{-1}$为求$C_1^d模p的逆元$</p>
-<p><strong>加解密正确性证明</strong><br>m &#x3D; $C_2(C_1^d)^{-1} mod p$<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#x3D; $m<em>\beta^k</em>(\alpha^{kd})^{-1} mod p$<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#x3D; $m<em>\beta^k</em>(\beta^{k})^{-1} mod p$  (因为$\beta &#x3D; \alpha^d mod p$)<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&#x3D; m</p>
+<p><strong>加解密正确性证明</strong><br>m &#x3D; $C_2(C_1^d)^{-1} mod p$<br>&#x3D; $m$ * $\beta^k$ * $(\alpha^{kd})^{-1} mod p$<br>&#x3D; $m$ * $\beta^k$ * $(\beta^{k})^{-1} mod p$  (因为$\beta &#x3D; \alpha^d mod p$)<br>&#x3D; m</p>
 
                 
             </div>
@@ -867,9 +867,9 @@
                 <a href="/e5de.html">
                     <div class="card-image">
                         
-                        <img src="https://x0.ifengimg.com/res/2020/47DC641E40B34CEF2A209A9B595031C97F0EE1C5_size311_w1920_h1200.jpeg" class="responsive-img" alt="Java多线程">
+                        <img src="https://x0.ifengimg.com/res/2020/47DC641E40B34CEF2A209A9B595031C97F0EE1C5_size311_w1920_h1200.jpeg" class="responsive-img" alt="Java基础 - 多线程">
                         
-                        <span class="card-title">Java多线程</span>
+                        <span class="card-title">Java基础 - 多线程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1070,6 +1070,13 @@
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1143,7 +1150,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">59.2k</span>
+                        class="white-color">66.2k</span>
             
             
             
