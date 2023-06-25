@@ -179,6 +179,13 @@
         </a>
       </li>
       
+      <li>
+        <a href="/categories/javaPrj">
+          
+          <span>其他</span>
+        </a>
+      </li>
+      
     </ul>
     
   </li>
@@ -446,6 +453,14 @@
                   </a>
                 </li>
               
+                <li>
+
+                  <a href="/categories/javaPrj " style="margin-left:75px">
+				  
+		          <span>其他</span>
+                  </a>
+                </li>
+              
             </ul>
           
         </li>
@@ -693,7 +708,7 @@
 <h3 id="分组密码"><a href="#分组密码" class="headerlink" title="分组密码"></a>分组密码</h3><p>分组密码（block cipher）是现代密码学中的重要体制之一，也是应用最广泛、影响最大的一种密码体制。其主要任务是提供数据保密性，也可以用在伪随机数生成器、序列密码、认证码和哈希函数的构造中。</p>
 <p>分组密码又称为对称密码，具有加解密速度快、安全性好的特点。得到了许多密码芯片的支持，在许多研究和应用领域中得到了广泛的应用</p>
 <p>分组密码的原理是将明文消息经过编码表示后的二进制序列$P_1,P_2…P_i$划分为若干个固定长度（长为m）的组$p&#x3D;(p_0,p_1,…,p_{m-1})$，各组分别在密钥$k&#x3D;(k_0,k_1,…,k_{t-1})$的控制下转换成长度为n的密文分组$c&#x3D;(c_0,c_1,…c_{n-1})$。其本质是一个从明文空间（m长的比特串的集合）P到密文空间（n长的比特串的集合）c的一一映射<br><img src="http://img.zerollone.top/cryptography/10/10-1.png"></p>
-<p>####分组密码的要求<br><strong>1、分组长度要足够打</strong><br>当分组长度较小时，攻击者可以通过穷尽明文空间，得到密码变换的规律，难以抵挡选择明文攻击<br><strong>2、密钥量要足够大</strong><br>密钥量小，攻击者可以有效通过穷尽密钥，对密文进行解密，以得到有意义的明文，难以抵御唯密文攻击<br><strong>3、密码变换要足够复杂</strong><br>使攻击者除了穷尽攻击以外，找不到其他有效的数学破译方法<br><strong>4、加密和解密运算要简单</strong><br>便于软件和硬件实现，性能好<br><strong>5、无数据扩展或压缩</strong></p>
+<h4 id="分组密码的要求"><a href="#分组密码的要求" class="headerlink" title="分组密码的要求"></a>分组密码的要求</h4><p><strong>1、分组长度要足够打</strong><br>当分组长度较小时，攻击者可以通过穷尽明文空间，得到密码变换的规律，难以抵挡选择明文攻击<br><strong>2、密钥量要足够大</strong><br>密钥量小，攻击者可以有效通过穷尽密钥，对密文进行解密，以得到有意义的明文，难以抵御唯密文攻击<br><strong>3、密码变换要足够复杂</strong><br>使攻击者除了穷尽攻击以外，找不到其他有效的数学破译方法<br><strong>4、加密和解密运算要简单</strong><br>便于软件和硬件实现，性能好<br><strong>5、无数据扩展或压缩</strong></p>
 <br>
 
 <h4 id="分组密码的设计思想"><a href="#分组密码的设计思想" class="headerlink" title="分组密码的设计思想"></a>分组密码的设计思想</h4><ul>
@@ -1093,6 +1108,13 @@
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1166,7 +1188,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">71.4k</span>
+                        class="white-color">74k</span>
             
             
             
