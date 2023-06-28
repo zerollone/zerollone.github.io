@@ -699,11 +699,11 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>记录新建springboot项目的过程，配置mybatis-plus相关依赖，并读取数据库中的数据，数据表createTime和updateTime字段在添加数据和修改数据时自动生成和修改</p>
-<h4 id="1、选择idea中创建springboot的组件"><a href="#1、选择idea中创建springboot的组件" class="headerlink" title="1、选择idea中创建springboot的组件"></a>1、选择idea中创建springboot的组件</h4><p><img src="/./images/1/1.png"></p>
-<h4 id="2、Group与Artifact中输入名称并选择java版本"><a href="#2、Group与Artifact中输入名称并选择java版本" class="headerlink" title="2、Group与Artifact中输入名称并选择java版本"></a>2、Group与Artifact中输入名称并选择java版本</h4><p><img src="/./images/1/2.png"></p>
-<h4 id="3、选择项目所需的插件"><a href="#3、选择项目所需的插件" class="headerlink" title="3、选择项目所需的插件"></a>3、选择项目所需的插件</h4><p>如果是前后端分离项目可以不用选择<code>Thymeleaf</code><br><img src="/./images/1/3.png"></p>
-<h4 id="4、选择文件保存路径"><a href="#4、选择文件保存路径" class="headerlink" title="4、选择文件保存路径"></a>4、选择文件保存路径</h4><p><img src="/./images/1/4.png"></p>
-<h4 id="5、创建成功后等待项目初始化"><a href="#5、创建成功后等待项目初始化" class="headerlink" title="5、创建成功后等待项目初始化"></a>5、创建成功后等待项目初始化</h4><p><img src="/./images/1/5.png"></p>
+<h4 id="1、选择idea中创建springboot的组件"><a href="#1、选择idea中创建springboot的组件" class="headerlink" title="1、选择idea中创建springboot的组件"></a>1、选择idea中创建springboot的组件</h4><p><img src="http://img.zerollone.top/javaPrj/1/1.png"></p>
+<h4 id="2、Group与Artifact中输入名称并选择java版本"><a href="#2、Group与Artifact中输入名称并选择java版本" class="headerlink" title="2、Group与Artifact中输入名称并选择java版本"></a>2、Group与Artifact中输入名称并选择java版本</h4><p><img src="http://img.zerollone.top/javaPrj/1/2.png"></p>
+<h4 id="3、选择项目所需的插件"><a href="#3、选择项目所需的插件" class="headerlink" title="3、选择项目所需的插件"></a>3、选择项目所需的插件</h4><p>如果是前后端分离项目可以不用选择<code>Thymeleaf</code><br><img src="http://img.zerollone.top/javaPrj/1/3.png"></p>
+<h4 id="4、选择文件保存路径"><a href="#4、选择文件保存路径" class="headerlink" title="4、选择文件保存路径"></a>4、选择文件保存路径</h4><p><img src="http://img.zerollone.top/javaPrj/1/4.png"></p>
+<h4 id="5、创建成功后等待项目初始化"><a href="#5、创建成功后等待项目初始化" class="headerlink" title="5、创建成功后等待项目初始化"></a>5、创建成功后等待项目初始化</h4><p><img src="http://img.zerollone.top/javaPrj/1/5.png"></p>
 <h4 id="6、pom-xml中引入mybatis-plus的依赖（不能使用mybatis-plus，必须使用mybatis-plus-boot-starter，因为是在springboot工程中，需要有对应关系）"><a href="#6、pom-xml中引入mybatis-plus的依赖（不能使用mybatis-plus，必须使用mybatis-plus-boot-starter，因为是在springboot工程中，需要有对应关系）" class="headerlink" title="6、pom.xml中引入mybatis-plus的依赖（不能使用mybatis-plus，必须使用mybatis-plus-boot-starter，因为是在springboot工程中，需要有对应关系）"></a>6、pom.xml中引入mybatis-plus的依赖（<font color=red>不能使用mybatis-plus，必须使用mybatis-plus-boot-starter</font>，因为是在springboot工程中，需要有对应关系）</h4><pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>com.baomidou<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>mybatis-plus-boot-starter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
@@ -786,7 +786,7 @@ log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="9、启动类添加-MapperScan-“com-test-allstart-mapper”-，否则无法加载Mapper-bean"><a href="#9、启动类添加-MapperScan-“com-test-allstart-mapper”-，否则无法加载Mapper-bean" class="headerlink" title="9、启动类添加@MapperScan(“com.test.allstart.mapper”)，否则无法加载Mapper bean"></a>9、启动类添加@MapperScan(“com.test.allstart.mapper”)，否则无法加载Mapper bean</h4><p><img src="/./images/1/6.jpg"></p>
+<h4 id="9、启动类添加-MapperScan-“com-test-allstart-mapper”-，否则无法加载Mapper-bean"><a href="#9、启动类添加-MapperScan-“com-test-allstart-mapper”-，否则无法加载Mapper-bean" class="headerlink" title="9、启动类添加@MapperScan(“com.test.allstart.mapper”)，否则无法加载Mapper bean"></a>9、启动类添加@MapperScan(“com.test.allstart.mapper”)，否则无法加载Mapper bean</h4><p><img src="http://img.zerollone.top/javaPrj/1/6.jpg"></p>
 <h4 id="10、在Controller中的user文件中加入代码简单测试，浏览器访问”localhost-8080-x2F-user-x2F-a”可以查看数据库中的数据-RestController"><a href="#10、在Controller中的user文件中加入代码简单测试，浏览器访问”localhost-8080-x2F-user-x2F-a”可以查看数据库中的数据-RestController" class="headerlink" title="10、在Controller中的user文件中加入代码简单测试，浏览器访问”localhost:8080&#x2F;user&#x2F;a”可以查看数据库中的数据@RestController"></a>10、在Controller中的user文件中加入代码简单测试，浏览器访问”localhost:8080&#x2F;user&#x2F;a”可以查看数据库中的数据@RestController</h4><pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/user"</span><span class="token punctuation">)</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Autowired</span>
@@ -1001,17 +1001,16 @@ log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/5be8.html">
+                <a href="/4993.html">
                     <div class="card-image">
                         
-                        <img src="https://static001.geekbang.org/infoq/0c/0c422e63f61599cc7be9da745d211dfa.jpeg" class="responsive-img" alt="新建spring boot项目">
+                        <img src="https://img2.baidu.com/it/u=1969458732,2512331158&fm=253&fmt=auto&app=138&f=JPEG?w=837&h=500" class="responsive-img" alt="vue项目创建">
                         
-                        <span class="card-title">新建spring boot项目</span>
+                        <span class="card-title">vue项目创建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1021,9 +1020,9 @@ log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-28
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1036,12 +1035,11 @@ log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/springBoot/">
-                        <span class="chip bg-color">springBoot</span>
+                    <a href="/tags/vue/">
+                        <span class="chip bg-color">vue</span>
                     </a>
                     
                 </div>
@@ -1282,7 +1280,7 @@ log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">74k</span>
+                        class="white-color">82k</span>
             
             
             
