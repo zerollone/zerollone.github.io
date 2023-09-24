@@ -9,7 +9,7 @@
 
 连接层最上层是一些客户端和链接服务，主要完成一些类似于连接处理、授权认证及相关的安全方案。服务器也会为安全接入的每个客户端验证它所具有的操作权限。
 
-服务层第二次架构主要完成大多数的核心服务功能，如SQL接口，">
+服务层第二层架构主要完成大多数的核心服务功能，如SQL接口，">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -704,7 +704,7 @@
 <ul>
 <li><p>连接层<br>最上层是一些客户端和链接服务，主要完成一些类似于连接处理、授权认证及相关的安全方案。服务器也会为安全接入的每个客户端验证它所具有的操作权限。</p>
 </li>
-<li><p>服务层<br>第二次架构主要完成大多数的核心服务功能，如SQL接口，并完成缓存的查询，SQL的分析和优化，部分内置函数的执行。所有跨存储引擎的功能也在这一层实现，如过程、函数等。</p>
+<li><p>服务层<br>第二层架构主要完成大多数的核心服务功能，如SQL接口，并完成缓存的查询，SQL的分析和优化，部分内置函数的执行。所有跨存储引擎的功能也在这一层实现，如过程、函数等。</p>
 </li>
 <li><p>引擎层<br>存储引擎真正的负责了MySQL中数据的存储和提取，服务器通过API和存储引擎进行通信。不同的存储引擎具有不同的功能，这样可以根据自己的需要，来选取合适的存储引擎。</p>
 </li>
@@ -812,7 +812,10 @@
 <td>-</td>
 </tr>
 </tbody></table>
-<h4 id="存储引擎选择"><a href="#存储引擎选择" class="headerlink" title="存储引擎选择"></a>存储引擎选择</h4><p>在选择存储引擎时，应该根据应用系统的特点选择合适的存储引擎。对于复杂的应用系统，还可以根据实际情况选择多种存储引擎进行组合。<br><strong>InnoDB：</strong> 是Mysql的默认存储引擎，支持事务、外键。如果应用对事务的完整性有比较高的要求，在并发条件下要求数据的一致性，数据操作除了插入和查询之外，还包含很多的更新、删除操作，那么InnoDB存储引擎是比较合适的选择。<br><strong>MyISAM：</strong> 如果应用是以读操作和插入操作为主，只有很少的更新和删除操作，并且对事务的完整性、并发性要求不是很高，那么选择这个存储引擎是非常合适的。<br><strong>MEMORY：</strong> 将所有数据保存在内存中，访问速度快，通常用于临时表及缓存。MEMORY的缺陷就是对表的大小有限制，太大的表无法缓存在内存中，而且无法保障数据的安全性。</p>
+<h4 id="存储引擎选择"><a href="#存储引擎选择" class="headerlink" title="存储引擎选择"></a>存储引擎选择</h4><p>在选择存储引擎时，应该根据应用系统的特点选择合适的存储引擎。对于复杂的应用系统，还可以根据实际情况选择多种存储引擎进行组合。</p>
+<p><strong>InnoDB：</strong> 是Mysql的默认存储引擎，支持事务、外键。如果应用对事务的完整性有比较高的要求，在并发条件下要求数据的一致性，数据操作除了插入和查询之外，还包含很多的更新、删除操作，那么InnoDB存储引擎是比较合适的选择。</p>
+<p><strong>MyISAM：</strong> 如果应用是以读操作和插入操作为主，只有很少的更新和删除操作，并且对事务的完整性、并发性要求不是很高，那么选择这个存储引擎是非常合适的。</p>
+<p><strong>MEMORY：</strong> 将所有数据保存在内存中，访问速度快，通常用于临时表及缓存。MEMORY的缺陷就是对表的大小有限制，太大的表无法缓存在内存中，而且无法保障数据的安全性。</p>
 <h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><h4 id="索引概述"><a href="#索引概述" class="headerlink" title="索引概述"></a>索引概述</h4><p>索引（index）是帮助MySQL高效获取数据的数据结构（有序）。在数据之外，数据库系统还维护着满足特定查找算法的数据结构，这些数据结构以某种方式引用（指向）数据，这样就可以在这些数据结构上实现高级查找算法，这些数据结构就是索引。</p>
 <ol>
 <li><p>索引的优点</p>
@@ -838,7 +841,7 @@
 </thead>
 <tbody><tr>
 <td>B+Tree索引</td>
-<td>最常见的索引类型，大部分引擎都支持B+数索引</td>
+<td>最常见的索引类型，大部分引擎都支持B+树索引</td>
 </tr>
 <tr>
 <td>Hash索引</td>
@@ -887,11 +890,13 @@
 <td>不支持</td>
 </tr>
 </tbody></table>
-<h5 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h5><p><img src="http://img.zerollone.top/mysql/3.jpg"><br>二叉树缺点：顺序插入时，会形成一个链表，查询性能大大降低。大数据量情况下，层级较深，检索速度慢。<br>红黑树：大数据量情况下，层级较深，检索速度慢</p>
+<h5 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h5><p><img src="http://img.zerollone.top/mysql/3.jpg"><br>二叉树缺点：顺序插入时，会形成一个链表，查询性能大大降低。大数据量情况下，层级较深，检索速度慢。</p>
+<p>红黑树：大数据量情况下，层级较深，检索速度慢</p>
 <h5 id="B-tree（多路平衡查找树）"><a href="#B-tree（多路平衡查找树）" class="headerlink" title="B-tree（多路平衡查找树）"></a>B-tree（多路平衡查找树）</h5><p>以一颗最大度数为5（5阶）的B-tree为例（每个节点最多存储4个key，5个指针）。树的度数指的是一个节点的子节点个数。<br><img src="http://img.zerollone.top/mysql/4.jpg"></p>
 <h5 id="B-tree"><a href="#B-tree" class="headerlink" title="B+tree"></a>B+tree</h5><p><img src="http://img.zerollone.top/mysql/4.jpg"><br><strong>相对于B-tree区别：</strong><br>① 所有的数据都会出现在叶子节点<br>② 叶子节点形成一个单向链表</p>
 <p>MySQL索引数据结构对经典的 B+Tree进行了优化，在原B+Tree的基础上，增加了一个指向相邻叶子节点的链表指针，就形成了带有顺序指针的B+Tree，提高了区间访问的性能。<br><img src="http://img.zerollone.top/mysql/5.jpg"></p>
-<h5 id="Hash索引"><a href="#Hash索引" class="headerlink" title="Hash索引"></a>Hash索引</h5><p>哈希索引就是采用一定的hash算法，将键值换算成新的hash值，映射到对应的槽位上，然后存储在hash表中。<br>如果两个（或多个）键值，映射到一个相同的槽位上，它们就产生了hash冲突（也称为hash碰撞），可以通过链表来解决。<br><img src="http://img.zerollone.top/mysql/6.jpg"></p>
+<h5 id="Hash索引"><a href="#Hash索引" class="headerlink" title="Hash索引"></a>Hash索引</h5><p>哈希索引就是采用一定的hash算法，将键值换算成新的hash值，映射到对应的槽位上，然后存储在hash表中。</p>
+<p>如果两个（或多个）键值，映射到一个相同的槽位上，它们就产生了hash冲突（也称为hash碰撞），可以通过链表来解决。<br><img src="http://img.zerollone.top/mysql/6.jpg"></p>
 <p>Hash索引特点</p>
 <ul>
 <li>Hash索引只能用于对等比较（&#x3D;，in），不支持范围查询（between，&lt;，&gt;，…）</li>
@@ -990,7 +995,7 @@
 </li>
 </ol>
 <h4 id="SQL性能优化"><a href="#SQL性能优化" class="headerlink" title="SQL性能优化"></a>SQL性能优化</h4><ol>
-<li><p>SQL指令执行频率<br>MySQL客户端连接成功后，通过show [sessionlglobal]status命令可以查看服务器状态信息。通过如下指令，可以查看当前数据库的INSERT、UPDATE、DELETE、SELECT的访问频次:</p>
+<li><p>SQL指令执行频率<br>MySQL客户端连接成功后，通过show [session | global] status命令可以查看服务器状态信息。通过如下指令，可以查看当前数据库的INSERT、UPDATE、DELETE、SELECT的访问频次:</p>
 <pre class="line-numbers language-sql"><code class="language-sql"><span class="token keyword">show</span> <span class="token keyword">global</span> <span class="token keyword">status</span> <span class="token operator">like</span> <span class="token string">'Com_______'</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
@@ -1110,7 +1115,7 @@ long_query_time <span class="token operator">=</span> <span class="token number"
 <span class="token comment" spellcheck="true">-- force index</span>
 <span class="token keyword">explain</span> <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> tableName <span class="token keyword">force</span> <span class="token keyword">index</span><span class="token punctuation">(</span>indexName<span class="token punctuation">)</span> <span class="token keyword">where</span> pro<span class="token operator">=</span><span class="token string">"软件"</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="覆盖索引"><a href="#覆盖索引" class="headerlink" title="覆盖索引"></a>覆盖索引</h5><p>尽量使用覆盖索引，覆盖索引是查询使用了索引，并且需要返回的列，在该索引中已经全部能够找到。并且应该尽量减少使用 select *</p>
+<h5 id="覆盖索引"><a href="#覆盖索引" class="headerlink" title="覆盖索引"></a>覆盖索引</h5><p>尽量使用覆盖索引，覆盖索引是查询使用了索引，并且需要返回的列，在该索引中已经全部能够找到。并且应该尽量减少使用 <code>select *</code></p>
 <pre class="line-numbers language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 首先建立name和age的联合索引，id是主键，对比下面两条SQL语句</span>
 <span class="token keyword">select</span> id<span class="token punctuation">,</span>name<span class="token punctuation">,</span>age <span class="token keyword">from</span> <span class="token keyword">user</span> <span class="token keyword">where</span> name<span class="token operator">=</span><span class="token string">'tom'</span> <span class="token operator">and</span> age <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
 <span class="token keyword">select</span> id<span class="token punctuation">,</span>name<span class="token punctuation">,</span>age<span class="token punctuation">,</span>gender <span class="token keyword">from</span> <span class="token keyword">user</span> <span class="token keyword">where</span> name<span class="token operator">=</span><span class="token string">'tom'</span> <span class="token operator">and</span> age <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
@@ -1182,7 +1187,8 @@ mysql \<span class="token operator">-</span>\<span class="token operator">-</spa
 </ul>
 </li>
 </ol>
-<h4 id="order-by优化"><a href="#order-by优化" class="headerlink" title="order by优化"></a>order by优化</h4><p>Using filesort：通过表的索引或全表扫描，读取满足条件的数据行，然后在排序缓冲区sort buffer中完成排序操作，所有不是通过索引直接返回排序结果的排序都叫FileSort排序。<br>Using index:通过有序索引顺序扫描直接返回有序数据，这种情况即为using index，不需要额外排序，操作效率高。<br>例子：</p>
+<h4 id="order-by优化"><a href="#order-by优化" class="headerlink" title="order by优化"></a>order by优化</h4><p>Using filesort：通过表的索引或全表扫描，读取满足条件的数据行，然后在排序缓冲区sort buffer中完成排序操作，所有不是通过索引直接返回排序结果的排序都叫FileSort排序。</p>
+<p>Using index：通过有序索引顺序扫描直接返回有序数据，这种情况即为using index，不需要额外排序，操作效率高。<br>例子：</p>
 <pre class="line-numbers language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 没有创建索引时，根据age，phone进行排序</span>
 <span class="token keyword">explain</span> <span class="token keyword">select</span> id<span class="token punctuation">,</span>age<span class="token punctuation">,</span>phone <span class="token keyword">from</span> tableName <span class="token keyword">order</span> <span class="token keyword">by</span> age<span class="token punctuation">,</span>phone<span class="token punctuation">;</span>
 
@@ -1219,15 +1225,18 @@ mysql \<span class="token operator">-</span>\<span class="token operator">-</spa
 <span class="token comment" spellcheck="true">-- 执行分组操作，根据pro字段分组，走索引    </span>
 <span class="token keyword">explain</span> <span class="token keyword">select</span> pro<span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">from</span> tableName <span class="token keyword">group</span> <span class="token keyword">by</span> pro<span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="limit优化"><a href="#limit优化" class="headerlink" title="limit优化"></a>limit优化</h4><p>一个常见又非常头疼的问题就是limit 2000000,10，此时需要MySQL排序前2000010记录，仅仅返回2000000 - 2000010的记录，其他记录丢弃，查询排序的代价非常大。<br>优化思路：一般分页查询时，通过创建覆盖索引能够比较好地提高性能，可以通过覆盖索引加子查询形式进行优化。</p>
+<h4 id="limit优化"><a href="#limit优化" class="headerlink" title="limit优化"></a>limit优化</h4><p>一个常见又非常头疼的问题就是limit 2000000,10，此时需要MySQL排序前2000010记录，仅仅返回2000000 - 2000010的记录，其他记录丢弃，查询排序的代价非常大。</p>
+<p>优化思路：一般分页查询时，通过创建覆盖索引能够比较好地提高性能，可以通过覆盖索引加子查询形式进行优化。</p>
 <pre class="line-numbers language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 原语句</span>
 <span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> tableName <span class="token keyword">limit</span> <span class="token number">9000000</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">;</span>
 
 <span class="token comment" spellcheck="true">-- 优化语句</span>
 <span class="token keyword">select</span> s<span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">from</span> stableName s<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">select</span> id <span class="token keyword">from</span> tableName <span class="token keyword">order</span> <span class="token keyword">by</span> id <span class="token keyword">limit</span> <span class="token number">9000000</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token number">a</span> <span class="token keyword">where</span> s<span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token number">a</span><span class="token punctuation">.</span>id<span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="count优化"><a href="#count优化" class="headerlink" title="count优化"></a>count优化</h4><p>MyISAM引擎把一个表的总行数存在了磁盘上，因此执行count(<em>)的时候会直接返回这个数，效率很高;<br>InnoDB引擎就麻烦了，它执行count(</em>)的时候，需要把数据一行一行地从引擎里面读出来，然后累积计数。<br>优化思路：自己计数。</p>
-<p><strong>count的几种用法</strong><br>count()是一个聚合函数，对于返回的结果集，一行行地判断，如果count函数的参数不是NULL，累计值就加1，否则不加，最后返回累计值。<br>用法:count(*) 、count(主键)、count(字段)、count (1)</p>
+<h4 id="count优化"><a href="#count优化" class="headerlink" title="count优化"></a>count优化</h4><p>MyISAM引擎把一个表的总行数存在了磁盘上，因此执行count(*)的时候会直接返回这个数，效率很高;</p>
+<p>InnoDB引擎就麻烦了，它执行count(*)的时候，需要把数据一行一行地从引擎里面读出来，然后累积计数。<br>优化思路：自己计数。</p>
+<p><strong>count的几种用法</strong><br>count()是一个聚合函数，对于返回的结果集，一行行地判断，如果count函数的参数不是NULL，累计值就加1，否则不加，最后返回累计值。</p>
+<p>用法:count(*) 、count(主键)、count(字段)、count (1)</p>
 <ol>
 <li><p>count(主键)<br>InnoDB引擎会遍历整张表，把每一行的主键id值都取出来，返回给服务层。服务层拿到主键后，直接按行进行累加(主键不可能为nul)。</p>
 </li>
@@ -1375,7 +1384,7 @@ mysql \<span class="token operator">-</span>\<span class="token operator">-</spa
 <span class="token keyword">set</span> 变量名 :<span class="token operator">=</span> 值<span class="token punctuation">;</span>
 <span class="token keyword">select</span> 字段名 <span class="token keyword">into</span> 变量名 <span class="token keyword">from</span> 表名<span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 语法：</span>
+<h4 id="if-语句"><a href="#if-语句" class="headerlink" title="if 语句"></a>if 语句</h4><pre class="line-numbers language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 语法：</span>
 <span class="token keyword">if</span> 条件<span class="token number">1</span> <span class="token keyword">then</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 elseif 条件<span class="token number">2</span> <span class="token keyword">then</span>
@@ -1561,7 +1570,7 @@ before<span class="token operator">/</span>afer <span class="token keyword">inse
 <span class="token keyword">end</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h2><p>锁是计算机协调多个进程或线程并发访问某一资源的机制。在数据库中，除传统的计算资源（CPU、RAM、V&#x2F;O)的争用以外，数据也是一种供许多用户共享的资源。如何保证数据并发访问的一致性、有效性是所有数据库必须解决的一个问题，锁冲突也是影响数据库并发访问性能的一个重要因素。从这个角度来说，锁对数据库而言显得尤其重要，也更加复杂。</p>
-<p>&amp;emsp;MySQL中的锁，按照锁的粒度分，主要分为以下三类</p>
+<p>MySQL中的锁，按照锁的粒度分，主要分为以下三类</p>
 <ul>
 <li>全局锁：锁定数据库中的所有表</li>
 <li>表级锁：每次操作锁住整张表</li>
@@ -1577,7 +1586,7 @@ mysqldump <span class="token operator">-</span>uroot <span class="token operator
 <span class="token comment" spellcheck="true">-- 在mysql命令行中进行解锁</span>
 unlock <span class="token keyword">tables</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>数据库中加全局锁，是一个比较重的操作，存在以下问题:<br>1.如果在主库上备份，那么在备份期间都不能执行更新，业务基本上就得停摆。<br>2．如果在从库上备份，那么在备份期间从库不能执行主库同步过来的二进制日志(binlog)，会导致主从延迟。</p>
+<p>数据库中加全局锁，是一个比较重的操作，存在以下问题:<br>1.如果在主库上备份，那么在备份期间都不能执行更新，业务基本上就得停摆。<br>2.如果在从库上备份，那么在备份期间从库不能执行主库同步过来的二进制日志(binlog)，会导致主从延迟。</p>
 <p>在InnoDB引擎中，我们可以在备份时加上参数–single-transaction参数来完成不加锁的一致性数据备份。</p>
 <pre class="line-numbers language-sql"><code class="language-sql">mysqldump \<span class="token operator">-</span>\<span class="token operator">-</span>single<span class="token operator">-</span><span class="token keyword">transaction</span> <span class="token operator">-</span>uroot <span class="token operator">-</span>p databaseName <span class="token operator">></span> databaseName<span class="token punctuation">.</span>sql
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -1676,7 +1685,11 @@ unlock <span class="token keyword">tables</span> <span class="token operator">/<
 <li>索引上的范围查询(唯一索引)–会访问到不满足条件的第一个值为止。</li>
 </ol>
 <p><strong>注意：</strong> 间隙锁唯一目的是防止其他事务插入间隙。间隙锁可以共存，一个事务采用的间隙锁不会阻止另一个事务在同一间隙上采用间隙锁。</p>
-<h2 id="InnoDB引擎"><a href="#InnoDB引擎" class="headerlink" title="InnoDB引擎"></a>InnoDB引擎</h2><p>表空间（ibd文件），一个mysql实例可以对应多个表空间，用于存储记录、索引等数据。<br>段，分为数据段(Leaf node segment)、索引段(Non-leaf node segment)、回滚段(Rollback segment)，InnoDB是索引组织表，数据段就是B+树的叶子节点，索引段即为B+树的非叶子节点。段用来管理多个Extent(区)。<br>区，表空间的单元结构，每个区的大小为1M。默认情况下，InnoDB存储引擎页大小为16K，即一个区中一共有64个连续的页。<br>页，是InnoDB存储引擎磁盘管理的最小单元，每个页的大小默认为16KB。为了保证页的连续性，InnoDB存储引擎每次从磁盘申请4-5个区。<br>行，InnoDB存储引擎数据是按行进行存放的。</p>
+<h2 id="InnoDB引擎"><a href="#InnoDB引擎" class="headerlink" title="InnoDB引擎"></a>InnoDB引擎</h2><p>表空间（ibd文件），一个mysql实例可以对应多个表空间，用于存储记录、索引等数据。</p>
+<p>段，分为数据段(Leaf node segment)、索引段(Non-leaf node segment)、回滚段(Rollback segment)，InnoDB是索引组织表，数据段就是B+树的叶子节点，索引段即为B+树的非叶子节点。段用来管理多个Extent(区)。</p>
+<p>区，表空间的单元结构，每个区的大小为1M。默认情况下，InnoDB存储引擎页大小为16K，即一个区中一共有64个连续的页。</p>
+<p>页，是InnoDB存储引擎磁盘管理的最小单元，每个页的大小默认为16KB。为了保证页的连续性，InnoDB存储引擎每次从磁盘申请4-5个区。</p>
+<p>行，InnoDB存储引擎数据是按行进行存放的。</p>
 <h4 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h4><p>MySQL5.5版本开始，默认使用InnoDB存储引擎，它擅长事务处理，具有崩溃恢复特性，在日常开发中使用非常广泛。下面是InnoDB架构图，左侧为内存结构，右侧为磁盘结构。<br><img src="http://img.zerollone.top/mysql/7.jpg"></p>
 <h5 id="内存结构"><a href="#内存结构" class="headerlink" title="内存结构"></a>内存结构</h5><p><strong>Buffer Pool：</strong> 缓冲池是主内存中的一个区域，里面可以缓存磁盘上经常操作的真实数据，在执行增删改查操作时，先操作缓冲池中的数据（若缓冲池没有数据，则从磁盘加载并缓存），然后再以一定频率刷新到磁盘，从而减少磁盘IO，加快处理速度。</p>
 <blockquote>
@@ -1746,9 +1759,13 @@ unlock <span class="token keyword">tables</span> <span class="token operator">/<
 </li>
 </ol>
 <h4 id="事务原理"><a href="#事务原理" class="headerlink" title="事务原理"></a>事务原理</h4><ul>
-<li><p>redo log<br>重做日志，记录的是事务提交时数据页的物理修改，是用来实现事务的持久性。<br>该日志文件由两部分组成：重做日志缓冲（redo log buffer）以及重做日志文件（(redo log file) ，前者是在内存中，后者在磁盘中。当事务提交之后会把所有修改信息都存到该日志文件中，用于在刷新脏页到磁盘，发生错误时，进行数据恢复使用</p>
+<li><p>redo log<br>  重做日志，记录的是事务提交时数据页的物理修改，是用来实现事务的持久性。</p>
+<p>  该日志文件由两部分组成：重做日志缓冲（redo log buffer）以及重做日志文件（(redo log file) ，前者是在内存中，后者在磁盘中。当事务提交之后会把所有修改信息都存到该日志文件中，用于在刷新脏页到磁盘，发生错误时，进行数据恢复使用</p>
 </li>
-<li><p>undo log<br>回滚日志，用于记录数据被修改前的信息，作用包含两个∶提供回滚和MVCC(多版本并发控制)。<br>undo log和redo log记录物理日志不一样，它是逻辑日志。可以认为当delete一条记录时，undo log中会记录一条对应的insert记录，反之亦然，当update一条记录时，它记录一条对应相反的update记录。当执行rollback时，就可以从undo log中的逻辑记录读取到相应的内容并进行回滚。<br>Undo log销毁: undo log在事务执行时产生，事务提交时，并不会立即删除undo log，因为这些日志可能还用于MVCC。<br>Undo log存储: undo log采用段的方式进行管理和记录，存放在前面介绍的rollback segment回滚段中，内部包含1024个undo log segment。</p>
+<li><p>undo log<br>  回滚日志，用于记录数据被修改前的信息，作用包含两个∶提供回滚和MVCC(多版本并发控制)。</p>
+<p>  undo log和redo log记录物理日志不一样，它是逻辑日志。可以认为当delete一条记录时，undo log中会记录一条对应的insert记录，反之亦然，当update一条记录时，它记录一条对应相反的update记录。当执行rollback时，就可以从undo log中的逻辑记录读取到相应的内容并进行回滚。</p>
+<p>  Undo log销毁: undo log在事务执行时产生，事务提交时，并不会立即删除undo log，因为这些日志可能还用于MVCC。</p>
+<p>  Undo log存储: undo log采用段的方式进行管理和记录，存放在前面介绍的rollback segment回滚段中，内部包含1024个undo log segment。</p>
 </li>
 </ul>
 <h4 id="MVCC"><a href="#MVCC" class="headerlink" title="MVCC"></a>MVCC</h4><p>当前读：读取的是记录的最新版本，读取时还要保证其他并发事务不能修改当前记录，会对读取的记录进行加锁。对于我们日常的操作，如：select …lock in share mode(共享锁)，select .. for update、update、insert、delete(排他锁)都是一种当前读。</p>
