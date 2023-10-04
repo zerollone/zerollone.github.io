@@ -4,8 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Spring, zerollone">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Docker入门, zerollone">
+    <meta name="description" content="安装 Docker1、卸载旧的版本
+yum remove docker \
+    docker-client \
+    docker-client-latest \
+    docker-common \
+    docker-1ate">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Spring | zerollone</title>
+    <title>Docker入门 | zerollone</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -621,12 +626,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://img.zerollone.top/00/docker.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Spring</h1>
+                    <h1 class="description center-align post-title">Docker入门</h1>
                 </div>
             </div>
         </div>
@@ -650,8 +655,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Spring/">
-                                <span class="chip bg-color">Spring</span>
+                            <a href="/tags/Docker/">
+                                <span class="chip bg-color">Docker</span>
                             </a>
                         
                     </div>
@@ -662,8 +667,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Spring/" class="post-category">
-                                Spring
+                            <a href="/categories/docker/" class="post-category">
+                                docker
                             </a>
                         
                     </div>
@@ -675,28 +680,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-04-07
+                    2023-10-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-12
+                    2023-10-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    92
+                    4.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    18 分
                 </div>
                 
 
@@ -711,28 +716,524 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@SpringBootApplication</span>
+                <h3 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 Docker</h3><p>1、卸载旧的版本</p>
+<pre class="line-numbers language-sh"><code class="language-sh">yum remove docker \
+    docker-client \
+    docker-client-latest \
+    docker-common \
+    docker-1atest \
+    docker-latest-logrotate \
+    docker-logrotate \
+    docker-engine
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>2、下载需要安装的包</p>
+<pre class="line-numbers language-sh"><code class="language-sh">yum install -y yum-utils
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>3、设置镜像仓库</p>
+<pre class="line-numbers language-sh"><code class="language-sh"># 推荐使用国内的镜像
+yum-config-manager \
+    --add-repo \
+    http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>4、更新yum软件包索引</p>
+<pre class="line-numbers language-sh"><code class="language-sh">yum makecache fast
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>5、安装docker</p>
+<pre class="line-numbers language-sh"><code class="language-sh"># docker-ce 社区版  ee 企业版
+yum install docker-ce docker-ce-cli containerd.io
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>6、启动docker</p>
+<pre class="line-numbers language-sh"><code class="language-sh">systemctl start docker
 
-<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+# 验证是否启动成功
+docker version
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>7、运行Hello-world</p>
+<pre class="line-numbers language-sh"><code class="language-sh">docker run hello-world
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>8、卸载docker</p>
+<pre class="line-numbers language-sh"><code class="language-sh"># 卸载依赖
+yum remove docker-ce docker-ce-cli containerd.io
 
-<span class="token comment" spellcheck="true">//启动springboot程序，启动spring容器，如果是web项目，启动内嵌的tomcat</span>
+# 删除资源文件
+rm -rf /var/lib/docker
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Docker-run的运行流程"><a href="#Docker-run的运行流程" class="headerlink" title="Docker run的运行流程"></a>Docker run的运行流程</h3><ul>
+<li>docker首先在本机寻找镜像，判断本机是否存在这个镜像</li>
+<li>如果有这个镜像，则使用此镜像运行；如果没有，则去docker hub 上下载镜像</li>
+<li>在docker hub 上是否能找到此镜像</li>
+<li>如果找到，则下载镜像到本地并运行；如果没有找到，则返回错误</li>
+</ul>
+<h3 id="Docker-底层原理"><a href="#Docker-底层原理" class="headerlink" title="Docker 底层原理"></a>Docker 底层原理</h3><p>docker是如何进行工作的</p>
+<blockquote>
+<p>Docker是一个Client - Server结构的系统，Docker的守护进程运行在主机上。通过Socket从客户端访问。DockerServer接收到Docker-Client的指令，就会执行这个命令新建docker容器</p>
+</blockquote>
+<p>docker为什么比vm快</p>
+<blockquote>
+<p>Docker有着比虚拟机更少的抽象层。<br>docker利用的是宿主机的内核，vm需要是Guest Os。</p>
+<p>所以说，新建一个容器的时候，docker不需要像虚拟机一样重新加载一个操作系统内核，避免引导。虚拟机是加载Guest oS ,分钟级别的，而docker是利用宿主机的操作系统吗，省略了这个复杂的过程，秒级!</p>
+</blockquote>
+<h3 id="Docker-常用命令"><a href="#Docker-常用命令" class="headerlink" title="Docker 常用命令"></a>Docker 常用命令</h3><h4 id="帮助命令"><a href="#帮助命令" class="headerlink" title="帮助命令"></a>帮助命令</h4><pre class="line-numbers language-sh"><code class="language-sh">docker version      # 查看docker版本 
+docker info         # 查看docker详细信息
+docker --help       # 查看docker的所有命令
+docker 命令 --help  # 查看docker某个命令的参数信息
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="镜像命令"><a href="#镜像命令" class="headerlink" title="镜像命令"></a>镜像命令</h4><p>【<strong>docker images</strong>】  查看本地主机上的所有镜像</p>
+<pre class="line-numbers language-sh"><code class="language-sh"># 可选参数
 
-SpringApplication<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>Application<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+-a，--all   # 列出所有镜像
+-q，--quiet # 只显示镜像的id
+  
 
-<span class="token punctuation">}</span><span class="token punctuation">}</span>
+[root@zerollone ~]# docker images
+REPOSITORY                TAG       IMAGE ID       CREATED        SIZE
+postgres                  latest    a373cbdcfe8b   2 weeks ago    418MB
+# 解释说明
+REPOSITORY  镜像的仓库源
+TAG         镜像的标签
+IMAGE ID    镜像的id
+CREATED     镜像的创建时间
+SIZE        镜像的大小
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>【<strong>docker search</strong>】 搜索镜像</p>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@zerollone ~]# docker search mysql
+NAME                            DESCRIPTION                                      STARS     OFFICIAL   AUTOMATED
+mysql                           MySQL is a widely used, open-source relation…   14487     [OK]       
+mariadb                         MariaDB Server is a high performing open sou…   5529      [OK]       
+percona                         Percona Server is a fork of the MySQL relati…   621       [OK]
 
-创建一个spring mvc的controller
+# 命令可选项，通过搜索来过滤
+--fiter=STARS=3000  # 搜索STARS大于3000的镜像
 
-<span class="token annotation punctuation">@Controller</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloController</span> <span class="token punctuation">{</span>
+[root@zerollone ~]# docker search mysql --filter=STARS=3000;
+NAME      DESCRIPTION                                      STARS     OFFICIAL   AUTOMATED
+mysql     MySQL is a widely used, open-source relation…   14487     [OK]       
+mariadb   MariaDB Server is a high performing open sou…   5530      [OK]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>【<strong>docker pull</strong>】  下载镜像</p>
+<pre class="line-numbers language-sh"><code class="language-sh"># 下载镜像  
+# docker pull 镜像名[:tag]  tag表示版本
+[root@zerollone ~]# docker pull mysql
+Using default tag: latest           # 如果不写tag，默认是latest，最新版本   
+latest: Pulling from library/mysql
+5262579e8e45: Pull complete         # 分层下载，docker image 的核心，联合文件系统
+741b767e25b7: Pull complete 
+06e0c37837cf: Pull complete 
+c6f5d3670db7: Pull complete 
+d5c567b29c3e: Pull complete 
+6effcc6561c9: Pull complete 
+1e1493d45d9c: Pull complete 
+7101609fa7d9: Pull complete 
+432a1261dc2a: Pull complete 
+865a24d6d1f2: Pull complete 
+Digest: sha256:566007208a3f1cc8f9df6b767665b5c9b800fc4fb5f863d17aa1df362880ed04 # 签名
+Status: Downloaded newer image for mysql:latest
+docker.io/library/mysql:latest      # 下载的真实地址
 
-    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/boot/hello"</span><span class="token punctuation">)</span>
-    <span class="token keyword">public</span> <span class="token annotation punctuation">@ResponseBody</span> String <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token string">"Hello Spring Boot"</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+# 下面的命令等价
+docker pull mysql
+docker pull docker.io/library/mysql:latest
+
+
+# 指定版本下载
+[root@zerollone ~]# docker pull mysql:8.0
+8.0: Pulling from library/mysql
+5262579e8e45: Already exists    # 与前面下载的镜像共用的文件
+741b767e25b7: Already exists 
+06e0c37837cf: Already exists 
+c6f5d3670db7: Already exists 
+d5c567b29c3e: Already exists 
+323a74fdf36b: Pull complete 
+130e11b8eb71: Pull complete 
+e92f1f2dd77c: Pull complete 
+43c0f03962c9: Pull complete 
+6194c2f9ce13: Pull complete 
+a235a73ec4d4: Pull complete 
+Digest: sha256:a7a96a9dbf6f310703c4e0c61086b23c5835c33a05544cdc952a7cd0b8feb675
+Status: Downloaded newer image for mysql:8.0
+docker.io/library/mysql:8.0
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>【<strong>docker rmi</strong>】  删除镜像</p>
+<pre class="line-numbers language-sh"><code class="language-sh">docker rmi -f 镜像id                # 删除指定的镜像
+docker rmi -f 镜像id 镜像id 镜像id   # 删除多个镜像
+docker rmi -f $(docker images -aq)  # 删除全部镜像  
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="容器命令"><a href="#容器命令" class="headerlink" title="容器命令"></a>容器命令</h4><p><em>说明：有了镜像才可以创建容器，下载一个centos镜像来测试学习，docker pull centos</em></p>
+<p><strong>新建容器并启动</strong></p>
+<pre class="line-numbers language-sh"><code class="language-sh">docker run [可选参数] imageName
+
+# 参数说明
+--name="name"   # 设置容器名字，用来与其他容器进行区分
+-d              # 以后台的方式运行
+-it             # 使用交互式方式运行， 进入容器查看内容
+-p              # 小写，指定容器的端口，-p 主机端口:容器端口
+-P              # 大写，随机指定端口
+
+# 启动并进入容器
+docker run -it centos /bin/bash
+
+# 退出容器
+exit
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>列出所有的运行的容器</strong></p>
+<pre class="line-numbers language-sh"><code class="language-sh">docker ps  列出所有正在运行的容器
+
+# 参数说明
+-a      # 列出当前正在运行的容器 + 历史运行的容器
+-n=x    # 列车最近运行的前x个容器
+-q      # 只显示容器的编号
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>退出容器</strong></p>
+<pre class="line-numbers language-sh"><code class="language-sh">exit         # 停止并退出容器
+ctrl + p + q # 不停止但退出容器
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><strong>删除容器</strong></p>
+<pre class="line-numbers language-sh"><code class="language-sh">docker rm 容器id                # 删除指定的容器，不能删除正在运行的容器
+docker rm -f 容器id             # 可以删除正在运行的容器
+docker rm -f $(docker ps -aq)   # 删除所有的容器
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><strong>启动重启停止杀死容器</strong></p>
+<pre class="line-numbers language-sh"><code class="language-sh">docker start 容器id         # 启动容器
+docker restart 容器id       # 重启容器
+docker stop 容器id          # 停止正在运行的容器
+docker kill 容器id          # 强制停止运行的容器
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="其他常用命令"><a href="#其他常用命令" class="headerlink" title="其他常用命令"></a>其他常用命令</h4><p><strong>后台启动容器</strong></p>
+<ul>
+<li>docker run -d 容器id</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh">docker run -d centos
+
+# 启动后，运行 docker ps，发现 centos 停止并未运行
+# 问题原因：
+#   docker 容器使用后台运行，就必须要有一个前台进程，docker 发现没有应用就会自动停止。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>查看日志</strong></p>
+<ul>
+<li>docker logs</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh"># 参数说明
+#    -f         显示全部日志 
+#    -t         显示日志的时间戳
+#    -n number  需要显示的日志条数，此命令等价于 --tail number
+
+# 在centos中循环打印
+docker run -d centos /bin/bash -c "while true;do echo hello;sleep 1;done"
+
+# 查看centos容器的日志信息
+docker logs -tf -n 10 容器id
+docker logs -tf --tail 10 容器id
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>查看容器中进程信息</strong></p>
+<ul>
+<li>docker top</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh"># 命令  docker top 容器id
+
+[root@zerollone ~]# docker top 3095
+UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+799                 1466                2663                0                   10:25               ?                   00:00:00            /bin/bash ********
+799                 2097                2663                0                   10:26               ?                   00:00:00            /bin/bash ********
+799                 2605                2586                0                   Sep17               ?                   00:00:00            /bin/bash ********
+
+# 说明：
+    UID：当前用户id
+    PID：当前进程id 
+    PPID：父进程id
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>查看镜像元数据</strong></p>
+<ul>
+<li>docker inspect 镜像&#x2F;容器id</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@zerollone ~]# docker inspect 5d0da3dc9764
+[
+    {
+        "Id": "sha256:5d0da3dc976460b72c77d94c8a1ad043720b0416bfc16c52c45d4847e53fadb6",
+        "RepoTags": [
+            "centos:latest"
+        ],
+        "RepoDigests": [
+            "centos@sha256:a27fd8080b517143cbbbab9dfb7c8571c40d67d534bbdee55bd6c473f432b177"
+        ],
+        "Parent": "",
+        "Comment": "",
+        "Created": "2021-09-15T18:20:05.184694267Z",
+        "Container": "9bf8a9e2ddff4c0d76a587c40239679f29c863a967f23abf7a5babb6c2121bf1",
+        "ContainerConfig": {
+            "Hostname": "9bf8a9e2ddff",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "#(nop) ",
+                "CMD [\"/bin/bash\"]"
+            ],
+            "Image": "sha256:f5b050f177fd426be8fe998a8ecf3fb1858d7e26dff4080b29a327d1bd5ba422",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "org.label-schema.build-date": "20210915",
+                "org.label-schema.license": "GPLv2",
+                "org.label-schema.name": "CentOS Base Image",
+                "org.label-schema.schema-version": "1.0",
+                "org.label-schema.vendor": "CentOS"
+            }
+        },
+        "DockerVersion": "20.10.7",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/bash"
+            ],
+            "Image": "sha256:f5b050f177fd426be8fe998a8ecf3fb1858d7e26dff4080b29a327d1bd5ba422",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "org.label-schema.build-date": "20210915",
+                "org.label-schema.license": "GPLv2",
+                "org.label-schema.name": "CentOS Base Image",
+                "org.label-schema.schema-version": "1.0",
+                "org.label-schema.vendor": "CentOS"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 231268856,
+        "VirtualSize": 231268856,
+        "GraphDriver": {
+            "Data": {
+                "MergedDir": "/var/lib/docker/overlay2/cbf06b7f65308cab4597b5ee427702f2f4f9a87fd62b24937387681576134eb4/merged",
+                "UpperDir": "/var/lib/docker/overlay2/cbf06b7f65308cab4597b5ee427702f2f4f9a87fd62b24937387681576134eb4/diff",
+                "WorkDir": "/var/lib/docker/overlay2/cbf06b7f65308cab4597b5ee427702f2f4f9a87fd62b24937387681576134eb4/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:74ddd0ec08fa43d09f32636ba91a0a3053b02cb4627c35051aff89f853606b59"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>进入当前正在运行的容器</strong><br>容器通常都是使用后台方式运行的，可能需要经常进入容器进行一些相关配置，进入正在运行的容器有两种命令</p>
+<ul>
+<li>docker exec -it 容器id  bashshell</li>
+<li>docker attach 容器id</li>
+</ul>
+<p><font color=red>第一种方式：</font></p>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@zerollone ~]# docker run -d centos /bin/bash -c "while true;do echo hello;sleep 100;done;"
+28fc1a2e10e344fd72d771ac02840f72a4ba1ab24b4e4707e3302c4f2f423c6a
+
+[root@zerollone ~]# docker ps
+CONTAINER ID   IMAGE                     COMMAND                   CREATED         STATUS         PORTS                                                                                                                                                                                            NAMES
+28fc1a2e10e3   centos                    "/bin/bash -c 'while…"   4 seconds ago   Up 3 seconds                                                                                                                                                                                                    epic_proskuriakova
+
+# 进入容器
+[root@zerollone ~]# docker exec -it 28fc1a2e10e3 /bin/bash
+
+[root@28fc1a2e10e3 /]# ls
+bin  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><font color=red>第二种方式：</font></p>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@zerollone ~]# docker attach 28fc1a2e10e3
+hello
+hello
+hello
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><em><font color=blue>docker exec 和 docker attach 的区别</font></em></p>
+<ul>
+<li>docker exec 进入容器后开启一个新的终端，可以在里面进行命令操作</li>
+<li>docker attach 进入容器中正在执行的终端，不会启动新的进程</li>
+</ul>
+<p><strong>从容器内拷贝文件到主机上</strong></p>
+<ul>
+<li>docker cp 容器id:文件路径 物理机文件路径</li>
+</ul>
+<pre class="line-numbers language-sh"><code class="language-sh"># 进入docker容器
+[root@zerollone ~]# docker run -it centos /bin/bash
+[root@038f00b63edf /]# ls
+bin  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[root@038f00b63edf /]# cd home/
+[root@038f00b63edf home]# touch test.java
+[root@038f00b63edf home]# ls
+test.java
+
+# 切换到本机
+[root@zerollone ~]# ls
+data  docker-compose.yml  thingsboard-3.4.4.rpm
+[root@zerollone ~]# docker ps
+CONTAINER ID   IMAGE                     COMMAND                   CREATED              STATUS              PORTS                                                                                                                                                                                            NAMES
+038f00b63edf   centos                    "/bin/bash"               About a minute ago   Up About a minute                                                                                                                                                                                                    awesome_banzai
+
+# 拷贝容器文件
+[root@zerollone ~]# docker cp 038f00b63edf:/home/test.java /root
+                                               Successfully copied 1.54kB to /root
+[root@zerollone ~]# ls
+data  docker-compose.yml  test.java  thingsboard-3.4.4.rpm
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h4><ul>
+<li>portainer</li>
+<li>Rancher</li>
+</ul>
+<p><strong>什么是portainer</strong><br>Docker图形化界面管理工具，提供一个后台面板供用户操作</p>
+<pre class="line-numbers language-sh"><code class="language-sh"># 命令
+docker run -d -p 10003:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock --privileged=true portainer/portainer
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>测试访问：<a target="_blank" rel="noopener" href="http://ip:10003/">http://ip:10003</a></p>
+<h3 id="Docker-镜像详解"><a href="#Docker-镜像详解" class="headerlink" title="Docker 镜像详解"></a>Docker 镜像详解</h3><h4 id="镜像是什么"><a href="#镜像是什么" class="headerlink" title="镜像是什么"></a>镜像是什么</h4><p>镜像是一种轻量级，可执行的独立软件包，用来打包软件运行环境和基于运行环境开发的软件，它包含运行某个软件所需的所有内容，包括代码、运行时、库、环境变量和配置文件。</p>
+<p>所有的应用，直接打包成docker镜像，就可以直接跑起来。</p>
+<h4 id="Docker镜像加载原理"><a href="#Docker镜像加载原理" class="headerlink" title="Docker镜像加载原理"></a>Docker镜像加载原理</h4><blockquote>
+<p>UnionFS 联合文件系统</p>
+</blockquote>
+<p>UnionFS（联合文件系统），联合文件系统是一种分层，轻量级并且高性能的文件系统，它支持对文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下。Union文件系统是Docker镜像的基础。镜像可以通过分层来进行继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像。</p>
+<p>特点：一次同时加载多个文件系统，但从外面看起来，只能看到一个文件系统，联合加载会把各层文件系统叠加起来，这样最终的文件系统会包含所有底层的的文件和目录。</p>
+<blockquote>
+<p>Docker镜像加载原理</p>
+</blockquote>
+<p>docker的镜像实际上由一层一层的文件系统组成，这种层级的文件系统UnionFS.</p>
+<p>bootfs(boot file system)主要包含bootloader和kernel，bootloader主要是引导加载kernel，Linux刚启动时会加载bootfs文件系统，在Docker镜像的最底层是bootfs。这一层与我们典型的Linux&#x2F;Unix系统是一样的，包含boot加载器和内核。当boot加载完成之后整个内核就都在内存中了，此时内存的使用权已由bootfs转交给内核，此时系统也会卸载bootfs。</p>
+<p>rootfs (root file system)，在bootfs之上。包含的就是典型Linux系统中的&#x2F;dev、&#x2F;proc、&#x2F;bin、&#x2F;etc等标准目录和文件。rootfs就是各种不同的操作系统发行版，比如Ubuntu，Centos等等。</p>
+<h4 id="分层理解"><a href="#分层理解" class="headerlink" title="分层理解"></a>分层理解</h4><p>通过下载一个镜像，观察下载日志的输出，可以看到镜像是一层一层被下载。<br><img src="/./images/1.jpg"></p>
+<p><strong>那么为什么Docker镜像要采用这种分层的结构呢</strong><br>最大的好处莫过于是资源共享了。比如有多个镜像都从相同的Base镜像构建而来，那么宿主机只需在磁盘上保留一份base镜像，同时内存中也只需要加载一份base镜像，这样就可以为所有的容器服务了，而且镜像的每一层都可以被共享。</p>
+<p>查看镜像分层的方式可以通过docker image inspect命令。</p>
+<p><strong>说明</strong><br>所有的Docker镜像都起始于一个基础镜像层，当进行修改或增加新的内容时，就会在当前镜像层之上，创建新的镜像层。</p>
+<p>举一个简单的例子，假如基于Ubuntu Linux16.04创建一个新的镜像，这就是新镜像的第一层；如果在该镜像中添加Python包，就会在基础镜像层之上创建第二个镜像层；如果继续添加一个安全补丁，就会创建第三个镜像层。</p>
+<p>该镜像当前已经包含3个镜像层，如下图所示(这只是一个用于演示的很简单的例子)。<br><img src="/./images/2.jpg"></p>
+<p>在添加额外的镜像层的同时，镜像始终保持是当前所有镜像的组合，理解这一点非常重要。下图中举了一个简单的例子，每个镜像层包含3个文件，而镜像包含了来自两个镜像层的6个文件。<br><img src="/./images/3.jpg"></p>
+<p>下图中展示了一个稍微复杂的三层镜像，在外部看来整个镜像只有6个文件，这是因为最上层中的文件7是文件5的一个更新版本。<br><img src="/./images/4.jpg"></p>
+<p>这种情况下，上层镜像层中的文件覆盖了底层镜像层中的文件。这样就使得文件的更新版本作为一个新镜像层添加到镜像当中。Docker通过存储引擎（新版本采用快照机制）的方式来实现镜像层堆栈，并保证多镜像层对外展示为统一的文件系统。</p>
+<p>Linux上可用的存储引擎有AUFS、Overlay2、Device Mapper、Btrfs以及ZFS。顾名思义，每种存储引擎都基于Linux中对应的文件系统或者块设备技术，并且每种存储引擎都有其独有的性能特点。</p>
+<p>Docker在 Windows上仅支持windowsfilter一种存储引擎，该引擎基于NTFS文件系统之上实现了分层和CoW。</p>
+<p>下图展示了与系统显示相同的三层镜像。所有镜像层堆叠并合并，对外提供统一的视图。<br><img src="/./images/5.jpg"></p>
+<p><strong>特点</strong></p>
+<ul>
+<li>Docker镜像都是只读的，当容器启动时，一个新的可写层被加载到镜像的顶部</li>
+<li>这一层就是我们通常说的容器层，容器之下的都叫镜像层!</li>
+</ul>
+<h4 id="commit镜像"><a href="#commit镜像" class="headerlink" title="commit镜像"></a>commit镜像</h4><p>提交一个自己的镜像，将自己主机里docker中的容器提交成一个新的版本。</p>
+<ul>
+<li>docker commit</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell"># 具体命令
+docker commit -m="提交容器的描述信息" -a="作者名" 容器id 镜像名:[tag]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><img src="/./images/6.jpg"></p>
+<h3 id="容器数据卷"><a href="#容器数据卷" class="headerlink" title="容器数据卷"></a>容器数据卷</h3><h4 id="什么是容器卷"><a href="#什么是容器卷" class="headerlink" title="什么是容器卷"></a>什么是容器卷</h4><p>容器之间可以有一个数据共享的技术，docker容器中产生的数据，同步到本地，这就是卷技术，目录的挂载，将容器内的目录挂载到Linux中。</p>
+<p><strong>容器的持久化和同步操作，容器间也是可以数据共享的</strong></p>
+<h4 id="使用数据卷"><a href="#使用数据卷" class="headerlink" title="使用数据卷"></a>使用数据卷</h4><h5 id="方式一：使用-v命令进行挂载"><a href="#方式一：使用-v命令进行挂载" class="headerlink" title="方式一：使用-v命令进行挂载"></a>方式一：使用<code>-v</code>命令进行挂载</h5><ul>
+<li>docker run -it -v 主机目录地址:容器内目录地址 ….</li>
+</ul>
+<pre class="line-numbers language-shell"><code class="language-shell"># 测试
+[root@zerollone ~]# pwd
+/root
+[root@zerollone ~]# ls
+data  docker-compose.yml  test.java  thingsboard-3.4.4.rpm
+
+# 挂载
+[root@zerollone ~]# docker run -it -v /root/centos_file:/home centos /bin/bash
+
+# 容器内
+[root@617b5b813dfc /]# cd home
+[root@617b5b813dfc home]# ls
+[root@617b5b813dfc home]# touch a.txt
+[root@617b5b813dfc home]# ls
+a.txt
+[root@617b5b813dfc home]# exit
+exit
+
+# 主机内
+[root@zerollone ~]# ls
+centos_file  data  docker-compose.yml  test.java  thingsboard-3.4.4.rpm
+[root@zerollone ~]# cd centos_file/
+[root@zerollone centos_file]# ls
+a.txt
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>可以通过<code>docker inspect</code>命令查看容器的挂载目录信息</p>
+<p><img src="/./images/7.jpg"></p>
+<p><em><strong>使用数据卷是一个双向绑定的操作。即不论在容器内外操作文件，都会看到文件相应的变化</strong></em></p>
+<pre class="line-numbers language-shell"><code class="language-shell"># 主机内
+[root@zerollone centos_file]# cat a.txt 
+[root@zerollone centos_file]# vim a.txt 
+[root@zerollone centos_file]# cat a.txt 
+hello docker!!!
+[root@zerollone centos_file]# docker ps
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS         PORTS     NAMES
+617b5b813dfc   centos    "/bin/bash"   30 minutes ago   Up 8 minutes             suspicious_villani
+
+# 进入容器
+[root@zerollone centos_file]# docker exec -it 617b5b813dfc /bin/bash
+[root@617b5b813dfc /]# cd home/
+[root@617b5b813dfc home]# cat a.txt 
+hello docker!!!
+[root@617b5b813dfc home]# 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>安装MySQL</p>
+<ul>
+<li><p>获取镜像<br>  docker pull mysql:5.7</p>
+</li>
+<li><p>运行容器，做数据挂载。同时启动mysql时，需要配置密码<br>  docker run -d -p 3306:3306 -v &#x2F;root&#x2F;mysql&#x2F;conf:&#x2F;etc&#x2F;mysql&#x2F;conf.d -v &#x2F;root&#x2F;mysql&#x2F;data:&#x2F;var&#x2F;lib&#x2F;mysql -e MYSQL_ROOT_PASSWORD&#x3D;123456 –name mysqlTest mysql:5.7</p>
+</li>
+</ul>
+<blockquote>
+<p>说明：<br>   -e 环境配置</p>
+</blockquote>
+</blockquote>
+<h4 id="匿名与具名挂载"><a href="#匿名与具名挂载" class="headerlink" title="匿名与具名挂载"></a>匿名与具名挂载</h4><h5 id="匿名挂载"><a href="#匿名挂载" class="headerlink" title="匿名挂载"></a>匿名挂载</h5><ul>
+<li>-v 容器内路径</li>
+<li>命令例子：docker run -d -P –name nginx01 -v &#x2F;etc&#x2F;nginx nginx</li>
+</ul>
+<p>上面的命令就是匿名挂载，-v只写了容器内的路径，没有写容器外的路径</p>
+<p>查看容器中数据卷的情况</p>
+<p><img src="/./images/8.jpg"></p>
+<h5 id="具名挂载"><a href="#具名挂载" class="headerlink" title="具名挂载"></a>具名挂载</h5><ul>
+<li>docker run -d -P –name nginx2 -v nginxTestFile:&#x2F;etc&#x2F;nginx nginx</li>
+</ul>
+<p>通过 <code>-v 卷名:容器内路径</code>来实现具名挂载</p>
+<p><img src="/./images/9.jpg"></p>
+<p>所有的docker容器内的卷，没有指定目录的情况下都是在目录<code>/var/lib/docker/volumes/xxxxx/_data</code></p>
+<p>可以通过具名挂载方法方便找到一个卷，大多数情况都使用具名挂载</p>
+<pre class="line-numbers language-sh"><code class="language-sh">-v 容器内路径           #匿名挂载
+-v 卷名:容器内路径      # 具名挂载
+-v 主机路径:容器内路径  # 指定路径挂载
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>拓展：</p>
+<blockquote>
+<p>通过 -v 容器内路径:ro&#x2F;rw 来改变读写权限<br>ro   readonly     只读<br>rw   readwrite    读写</p>
+<p>一旦设置了容器权限，容器对挂载出来的内容就存在限定。ro表示此路径只能通过宿主机来操作，容器内部是无法进行操作的。<br>docker run -d -P –name nginx01 -v nginx_1_file:&#x2F;etc&#x2F;nginx:ro nginx<br>docker run -d -P –name nginx02 -v nginx_2_file:&#x2F;etc&#x2F;nginx:rw nginx</p>
+</blockquote>
 
                 
             </div>
@@ -759,7 +1260,7 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zerollone.top/46eb.html">http://zerollone.top/46eb.html</a>
+                    <a href="http://zerollone.top/2bc5.html">http://zerollone.top/2bc5.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -797,8 +1298,8 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Spring/">
-                                    <span class="chip bg-color">Spring</span>
+                                <a href="/tags/Docker/">
+                                    <span class="chip bg-color">Docker</span>
                                 </a>
                             
                         </div>
@@ -881,13 +1382,12 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/83dd.html">
+                <a href="/89d9.html">
                     <div class="card-image">
                         
+                        <img src="http://img.zerollone.top/00/spring.jpg" class="responsive-img" alt="Spring入门">
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="SpringBoot">
-                        
-                        <span class="card-title">SpringBoot</span>
+                        <span class="card-title">Spring入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -898,14 +1398,14 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-07
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-04
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SpringBoot/" class="post-category">
-                                    SpringBoot
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
                                 </a>
                             
                             
@@ -915,8 +1415,8 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SpringBoot/">
-                        <span class="chip bg-color">SpringBoot</span>
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
                     </a>
                     
                 </div>
@@ -930,13 +1430,12 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/3eeb.html">
+                <a href="/359.html">
                     <div class="card-image">
                         
+                        <img src="http://img.zerollone.top/00/spring.jpg" class="responsive-img" alt="Spring概述">
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Spring概述</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -947,14 +1446,14 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/java/" class="post-category">
-                                    java
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
                                 </a>
                             
                             
@@ -964,8 +1463,8 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/solidity/">
-                        <span class="chip bg-color">solidity</span>
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
                     </a>
                     
                 </div>
@@ -1158,7 +1657,7 @@ SpringApplication<span class="token punctuation">.</span><span class="token func
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">147.8k</span>
+                        class="white-color">125.2k</span>
             
             
             
